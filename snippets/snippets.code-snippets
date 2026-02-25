@@ -1,0 +1,923 @@
+{
+    "Arabic html learn": {
+        "prefix": "صفحة",
+        "body": [
+            "<!DOCTYPE html>",
+            "<html lang='ar'>",
+            "<head>",
+            "    <meta charset='UTF-8'>",
+            "    <meta name='viewport' content='width=device-width, initial-scale=1.0'>",
+            " <title>${1:صفحة جديدة}</title>",
+            "</head>",
+            "<body>",
+            " ${2}",
+            "</body>",
+            "</html>"
+        ],
+        "description": "كتابة كود صفحة هوتمل",
+        "scope": "html"
+    },
+    "title:html": {
+        "prefix": "عنوان الصفحة",
+        "body": [
+            "<title>${1:عنوان الصفحة}</title>"
+        ],
+        "description": "إضافة عنصر title لتحديد عنوان الصفحة في HTML",
+        "scope": "html"
+    },
+    "option:value": {
+        "prefix": "خصائص القيمة",
+        "body": [
+            "value=\"${1:قيمة افتراضية}\""
+        ],
+        "description": "إضافة قيمة للحقل"
+    },
+    "option:name": {
+        "prefix": "خصائص الاسم",
+        "body": [
+            "name=\"${1:قيمة افتراضية}\""
+        ],
+        "description": "إضافة اسم للحقل"
+    },
+    "option:class": {
+        "prefix": "خصائص الفئة",
+        "body": [
+            "class=\"${1:قيمة افتراضية}\""
+        ],
+        "description": "إضافة فئة (class) للحقل"
+    },
+    "option:id": {
+        "prefix": "خصائص المعرف",
+        "body": [
+            "id=\"${1:قيمة افتراضية}\""
+        ],
+        "description": "إضافة معرف (id) للحقل"
+    },
+    "option:style": {
+        "prefix": "خصائص النمط",
+        "body": [
+            "style=\"${1:قيمة افتراضية}\""
+        ],
+        "description": "إضافة نمط (style) للحقل"
+    },
+    "button:normal": {
+        "prefix": "زر",
+        "body": [
+            "<button>${1:زر}</button>"
+        ],
+        "description": "اضافة زر هوتمل عادي من دون تنسيق",
+        "scope": "html"
+    },
+    "button": {
+        "prefix": "زر مع تنسيق",
+        "body": [
+            "<button name=\"${2:button}\" class=\"${5|button,key,press|}\" id=\"button${3:1}\" style=\"${4:background-color:red}\">${1:زر}</button>"
+        ],
+        "description": "اضافة زر هوتمل",
+        "scope": "html"
+    },
+    "button:multi": {
+        "prefix": "زر ارسال",
+        "body": [
+            "<button>${1|فتح,اضغط,الغاء,اغلاق,جديد,تحويل|}</button>"
+        ],
+        "description": "اضافة زر هوتمل عادي من دون تنسيق",
+        "scope": "html"
+    },
+    "text:input": {
+        "prefix": "حقل نصي",
+        "body": [
+            "<input type=\"text\" name=\"${1:inputName}\" id=\"${2:inputId}\" placeholder=\"${3:اكتب هنا}\" />"
+        ],
+        "description": "إضافة حقل نصي هوتمل",
+        "scope": "html"
+    },
+    "text:option": {
+        "prefix": "حقل نصي مع خيارات",
+        "body": [
+            "<input type=\"text\" ${1|value,name,class,id,style|}=\"${2}\" />"
+        ],
+        "description": "إضافة حقل نصي HTML مع خيارات محددة",
+        "scope": "html"
+    },
+    "link": {
+        "prefix": "رابط",
+        "body": [
+            "<a href=\"${1:https://www.example.com}\" target=\"${2:_blank}\">${3:رابط}</a>"
+        ],
+        "description": "إضافة رابط هوتمل",
+        "scope": "html"
+    },
+    "image": {
+        "prefix": "صورة",
+        "body": [
+            "<img src=\"${1:https://www.example.com/image.jpg}\" alt=\"${2:صورة}\" />"
+        ],
+        "description": "إضافة صورة هوتمل",
+        "scope": "html"
+    },
+    "table": {
+        "prefix": "جدول عدد العناصر 2",
+        "body": [
+            "<table>",
+            "    <thead>",
+            "        <tr>",
+            "            <th>${1:العنوان}</th>",
+            "            <th>${2:العنوان}</th>",
+            "        </tr>",
+            "    </thead>",
+            "    <tbody>",
+            "        <tr>",
+            "            <td>${3:القيمة}</td>",
+            "            <td>${4:القيمة}</td>",
+            "        </tr>",
+            "    </tbody>",
+            "</table>"
+        ],
+        "description": "إضافة جدول هوتمل",
+        "scope": "html"
+    },
+    "table-row:html": {
+        "prefix": "صف جدول",
+        "body": [
+            "<tr>",
+            "    ${1:اضفة خلية البيانات}",
+            "</tr>"
+        ],
+        "description": "إضافة صف جدول (tr) مع خلايا بيانات (td) في HTML",
+        "scope": "html"
+    },
+    "table-td:html": {
+        "prefix": "جدول",
+        "body": [
+            "<td>",
+            "    ${1:البيانات الأولى}",
+            "</td>"
+        ],
+        "description": "إضافة صف جدول (tr) مع خلايا بيانات (td) في HTML",
+        "scope": "html"
+    },
+    "list:ul": {
+        "prefix": "قائمة غير مرتبة",
+        "body": [
+            "<ul>",
+            "    <li>${1:العنصر}</li>",
+            "    <li>${2:العنصر}</li>",
+            "</ul>"
+        ],
+        "description": "إضافة قائمة غير مرتبة هوتمل",
+        "scope": "html"
+    },
+    "color:red": {
+        "prefix": "لون احمر",
+        "body": [
+            "color: red;"
+        ],
+        "description": "اللون الأحمر",
+        "scope": "css,html"
+    },
+    "color:blue": {
+        "prefix": "لون أزرق",
+        "body": [
+            "color: blue;"
+        ],
+        "description": "اللون الأزرق",
+        "scope": "css,html"
+    },
+    "color:green": {
+        "prefix": "لون أخضر",
+        "body": [
+            "color: green;"
+        ],
+        "description": "اللون الأخضر",
+        "scope": "css,html"
+    },
+    "color:yellow": {
+        "prefix": "لون أصفر",
+        "body": [
+            "color: yellow;"
+        ],
+        "description": "اللون الأصفر",
+        "scope": "css,html"
+    },
+    "color:black": {
+        "prefix": "لون أسود",
+        "body": [
+            "color: black;"
+        ],
+        "description": "اللون الأسود",
+        "scope": "css,html"
+    },
+    "color:white": {
+        "prefix": "لون أبيض",
+        "body": [
+            "color: white;"
+        ],
+        "description": "اللون الأبيض",
+        "scope": "css,html"
+    },
+    "color:gray": {
+        "prefix": "لون رمادي",
+        "body": [
+            "color: gray;"
+        ],
+        "description": "اللون الرمادي",
+        "scope": "css,html"
+    },
+    "color:purple": {
+        "prefix": "لون بنفسجي",
+        "body": [
+            "color: purple;"
+        ],
+        "description": "اللون البنفسجي",
+        "scope": "css,html"
+    },
+    "color:orange": {
+        "prefix": "لون برتقالي",
+        "body": [
+            "color: orange;"
+        ],
+        "description": "اللون البرتقالي",
+        "scope": "css,html"
+    },
+    "color:pink": {
+        "prefix": "لون وردي",
+        "body": [
+            "color: pink;"
+        ],
+        "description": "اللون الوردي",
+        "scope": "css,html"
+    },
+    "color:brown": {
+        "prefix": "لون بني",
+        "body": [
+            "color: brown;"
+        ],
+        "description": "اللون البني",
+        "scope": "css,html"
+    },
+    "color:cyan": {
+        "prefix": "لون سماوي",
+        "body": [
+            "color: cyan;"
+        ],
+        "description": "اللون السماوي",
+        "scope": "css,html"
+    },
+    "color:magenta": {
+        "prefix": "لون أرجواني",
+        "body": [
+            "color: magenta;"
+        ],
+        "description": "اللون الأرجواني",
+        "scope": "css,html"
+    },
+    "color:lime": {
+        "prefix": "لون ليموني",
+        "body": [
+            "color: lime;"
+        ],
+        "description": "اللون الليموني",
+        "scope": "css,html"
+    },
+    "color:gold": {
+        "prefix": "لون ذهبي",
+        "body": [
+            "color: gold;"
+        ],
+        "description": "اللون الذهبي",
+        "scope": "css,html"
+    },
+    "color:silver": {
+        "prefix": "لون فضي",
+        "body": [
+            "color: silver;"
+        ],
+        "description": "اللون الفضي",
+        "scope": "css,html"
+    },
+    "color:navy": {
+        "prefix": "لون كحلي",
+        "body": [
+            "color: navy;"
+        ],
+        "description": "اللون الكحلي",
+        "scope": "css,html"
+    },
+    "color:olive": {
+        "prefix": "لون زيتوني",
+        "body": [
+            "color: olive;"
+        ],
+        "description": "اللون الزيتوني",
+        "scope": "css,html"
+    },
+    "color:teal": {
+        "prefix": "لون تركواز",
+        "body": [
+            "color: teal;"
+        ],
+        "description": "اللون التركواز",
+        "scope": "css,html"
+    },
+    "color:maroon": {
+        "prefix": "لون خمري",
+        "body": [
+            "color: maroon;"
+        ],
+        "description": "اللون الخمري",
+        "scope": "css,html"
+    },
+    "color:beige": {
+        "prefix": "لون بيج",
+        "body": [
+            "color: beige;"
+        ],
+        "description": "اللون البيج",
+        "scope": "css,html"
+    },
+    "div": {
+        "prefix": "حاوية",
+        "body": [
+            "<div style=\"width: ${1:200}px; height: ${2:100}px; background-color: ${3:lightgray};\">",
+            "    ${4:محتوى القسم}",
+            "</div>"
+        ],
+        "description": "إضافة عنصر div مع عرض وارتفاع وخلفية",
+        "scope": "html"
+    },
+    "span": {
+        "prefix": "نص",
+        "body": [
+            "<span style=\"font-family: ${1:Arial}; font-size: ${2:16}px; font-weight: ${3:normal}; color: ${4:black};\">",
+            "    ${5:نص هنا}",
+            "</span>"
+        ],
+        "description": "إضافة نص مع تنسيق الخط في HTML",
+        "scope": "html"
+    },
+    "p": {
+        "prefix": "فقرة",
+        "body": [
+            "<p style=\"font-size: ${1:16}px; color: ${2:black}; text-align: ${3:left}; line-height: ${4:1.5};\">",
+            "    ${5:نص الفقرة هنا}",
+            "</p>"
+        ],
+        "description": "إضافة عنصر p مع تنسيق الخط واللون والمحاذاة"
+    },
+    "hr:html": {
+        "prefix": "فاصل",
+        "body": [
+            "<hr style=\"width: ${1:100%}; height: ${2:2}px; background-color: ${3:#000}; border: none; margin: ${4:10}px 0;\">"
+        ],
+        "description": "إضافة خط فاصل hr مع تنسيق العرض والارتفاع واللون"
+    },
+    "input:password": {
+        "prefix": "حقل رقم سري",
+        "body": [
+            "<input type=\"password\" name=\"${1:password}\" id=\"${2:password}\" placeholder=\"${3:أدخل كلمة المرور}\" required>"
+        ],
+        "description": "إضافة حقل إدخال كلمة مرور"
+    },
+    "video:html": {
+        "prefix": "فيديو",
+        "body": [
+            "<video width=\"${1:640}\" height=\"${2:360}\" controls>",
+            "    <source src=\"${3:video.mp4}\" type=\"${4:video/mp4}\">",
+            "    ${5:متصفحك لا يدعم تشغيل الفيديو.}",
+            "</video>"
+        ],
+        "description": "إضافة عنصر فيديو HTML مع خيارات العرض والتحكم",
+        "scope": "html"
+    },
+    "text:textarea": {
+        "prefix": "حقل نصي متعدد",
+        "body": [
+            "<textarea name=\"${1:textareaName}\" id=\"${2:textareaId}\" rows=\"${3:4}\" cols=\"${4:50}\" placeholder=\"${5:اكتب هنا}\">${6}</textarea>"
+        ],
+        "description": "إضافة حقل نصي متعدد الأسطر (textarea) في HTML",
+        "scope": "html"
+    },
+    "audio:html": {
+        "prefix": "مقطع صوتي",
+        "body": [
+            "<audio controls>",
+            "    <source src=\"${1:audio.mp3}\" type=\"${2:audio/mpeg}\">",
+            "    ${3:متصفحك لا يدعم تشغيل الصوت.}",
+            "</audio>"
+        ],
+        "description": "إضافة عنصر صوتي HTML مع خيارات التحكم",
+        "scope": "html"
+    },
+    "bold:text": {
+        "prefix": "نص عريض",
+        "body": [
+            "<b>${1:نص عريض هنا}</b>"
+        ],
+        "description": "إضافة نص عريض باستخدام عنصر b في HTML",
+        "scope": "html"
+    },
+    "blockquote:html": {
+        "prefix": "اقتباس",
+        "body": [
+            "<blockquote style=\"font-size: ${1:16}px; color: ${2:gray}; border-left: ${3:4px solid #ccc}; padding: ${4:10px}; margin: ${5:10px 0};\">",
+            "    ${6:نص الاقتباس هنا}",
+            "</blockquote>"
+        ],
+        "description": "إضافة عنصر اقتباس (blockquote) مع تنسيق HTML",
+        "scope": "html"
+    },
+    "form:html": {
+        "prefix": "نموذج",
+        "body": [
+            "<form action=\"${1:submit.php}\" method=\"${2:post}\" ${3:enctype=\"multipart/form-data\"}>",
+            "    <label for=\"${4:inputId}\">${5:اسم الحقل}</label>",
+            "    <input type=\"${6:text}\" name=\"${7:inputName}\" id=\"${4:inputId}\" placeholder=\"${8:اكتب هنا}\" />",
+            "    <button type=\"${9:submit}\">${10:إرسال}</button>",
+            "</form>"
+        ],
+        "description": "إضافة نموذج HTML مع حقل إدخال وزر إرسال",
+        "scope": "html"
+    },
+    "h1:html": {
+        "prefix": "عنوان",
+        "body": [
+            "<h1 style=\"font-size: ${1:32}px; color: ${2:black}; text-align: ${3:left};\">",
+            "    ${4:عنوان هنا}",
+            "</h1>"
+        ],
+        "description": "إضافة عنصر عنوان (h1) مع تنسيق HTML",
+        "scope": "html"
+    },
+    "h2:html": {
+        "prefix": "نص صغير جدا",
+        "body": [
+            "<h2 style=\"font-size: ${1:24}px; color: ${2:black}; text-align: ${3:left};\">",
+            "    ${4:عنوان هنا}",
+            "</h2>"
+        ],
+        "description": "إضافة عنصر عنوان (H2) مع تنسيق HTML",
+        "scope": "html"
+    },
+    "h3:html": {
+        "prefix": "نص صغير",
+        "body": [
+            "<h3 style=\"font-size: ${1:20}px; color: ${2:black}; text-align: ${3:left};\">",
+            "    ${4:عنوان هنا}",
+            "</h3>"
+        ],
+        "description": "إضافة عنصر عنوان (H3) مع تنسيق HTML",
+        "scope": "html"
+    },
+    "h4:html": {
+        "prefix": "نص عادي",
+        "body": [
+            "<h4 style=\"font-size: ${1:18}px; color: ${2:black}; text-align: ${3:left};\">",
+            "    ${4:عنوان هنا}",
+            "</h4>"
+        ],
+        "description": "إضافة عنصر عنوان (H4) مع تنسيق HTML",
+        "scope": "html"
+    },
+    "h5:html": {
+        "prefix": "نص كبير",
+        "body": [
+            "<h5 style=\"font-size: ${1:16}px; color: ${2:black}; text-align: ${3:left};\">",
+            "    ${4:عنوان هنا}",
+            "</h5>"
+        ],
+        "description": "إضافة عنصر عنوان (H5) مع تنسيق HTML",
+        "scope": "html"
+    },
+    "h6:html": {
+        "prefix": "نص كبير جدا",
+        "body": [
+            "<h6 style=\"font-size: ${1:14}px; color: ${2:black}; text-align: ${3:left};\">",
+            "    ${4:عنوان هنا}",
+            "</h6>"
+        ],
+        "description": "إضافة عنصر عنوان (H6) مع تنسيق HTML",
+        "scope": "html"
+    },
+    "link:html": {
+        "prefix": "رابط ملف التنسيق",
+        "body": [
+            "<link rel=\"${1:stylesheet}\" href=\"${2:style.css}\" type=\"${3:text/css}\" />"
+        ],
+        "description": "إضافة عنصر link لربط ملف خارجي (مثل CSS)",
+        "scope": "html"
+    },
+    "script:js:type": {
+        "prefix": "جافا سكريبت",
+        "body": [
+            "<script type=\"${1|text/javascript,module|}\">",
+            "    ${2:// اكتب كود JavaScript هنا}",
+            "</script>"
+        ],
+        "description": "إضافة عنصر script مع تحديد نوع JavaScript (مثل module أو text/javascript)",
+        "scope": "html"
+    },
+    "select:html": {
+        "prefix": "قائمة منسدلة",
+        "body": [
+            "<select name=\"${1:selectName}\" id=\"${2:selectId}\">",
+            "    <option value=\"${3:option1Value}\">${4:الخيار الأول}</option>",
+            "    <option value=\"${5:option2Value}\">${6:الخيار الثاني}</option>",
+            "</select>"
+        ],
+        "description": "إضافة عنصر select مع خيارات option في HTML",
+        "scope": "html"
+    },
+    "option:html": {
+        "prefix": "خيار",
+        "body": [
+            "<option value=\"${1:القيمة}\">${2:النص}</option>"
+        ],
+        "description": "إضافة عنصر option داخل قائمة select",
+        "scope": "html"
+    },
+    "style:html": {
+        "prefix": "تنسيق",
+        "body": [
+            "<style>",
+            "    ${1:/* اكتب كود CSS هنا */}",
+            "</style>"
+        ],
+        "description": "إضافة عنصر style لتضمين CSS داخل HTML",
+        "scope": "html"
+    },
+    "script:external": {
+        "prefix": "رابط جافا سكريبت خارجي",
+        "body": [
+            "<script src=\"${1:script.js}\" type=\"${2:text/javascript}\"></script>"
+        ],
+        "description": "إضافة عنصر script لربط ملف JavaScript خارجي",
+        "scope": "html"
+    },
+    "menu:html": {
+        "prefix": "قائمة ",
+        "body": [
+            "<menu>",
+            "    <li>${1:العنصر الأول}</li>",
+            "    <li>${2:العنصر الثاني}</li>",
+            "</menu>"
+        ],
+        "description": "إضافة عنصر menu بسيط بدون روابط",
+        "scope": "html"
+    },
+    "list-item:html": {
+        "prefix": "عنصر قائمة",
+        "body": [
+            "<li>${1:العنصر}</li>"
+        ],
+        "description": "إضافة عنصر قائمة li في HTML",
+        "scope": "html"
+    },
+    "picture:html": {
+        "prefix": "صور بحسب مقاس المحدد",
+        "body": [
+            "<picture>",
+            "    <source srcset=\"${1:example-large.jpg}\" media=\"(min-width: ${2:800px})\">",
+            "    <source srcset=\"${3:example-medium.jpg}\" media=\"(min-width: ${4:400px})\">",
+            "    <img src=\"${5:example-small.jpg}\" alt=\"${6:وصف الصورة}\">",
+            "</picture>"
+        ],
+        "description": "إضافة عنصر picture لإنشاء صور متجاوبة",
+        "scope": "html"
+    },
+    "file-input:image": {
+        "prefix": "زر ادخال صورة",
+        "body": [
+            "<input type=\"file\" id=\"${1:poster}\" name=\"${2:poster}\" accept=\"${3:image/png, image/jpeg}\" />"
+        ],
+        "description": "إضافة عنصر إدخال لتحميل الصور بصيغة PNG أو JPEG",
+        "scope": "html"
+    },
+    "file-input:pdf": {
+        "prefix": "زر ادخال ملف PDF",
+        "body": [
+            "<input type=\"file\" id=\"${1:pdfFile}\" name=\"${2:pdfFile}\" accept=\"${3:application/pdf}\" />"
+        ],
+        "description": "إضافة عنصر إدخال لتحميل ملفات PDF",
+        "scope": "html"
+    },
+    "dl:dt>:dd:html": {
+        "prefix": "قائمة تعريفات",
+        "body": [
+            "<dl>",
+            "   <dt>${1}</dt>",
+            "     <dd>${2}</dd>",
+            "</dl>"
+        ],
+        "description": "اضافة قاذمة من العنصار تعرف عن بعضها بشكل مرتب",
+        "scope": "html"
+    },
+    "em:html": {
+        "prefix": "نص مائل",
+        "body": [
+            "<em>${1:نص مائل هنا}</em>"
+        ],
+        "description": "إضافة نص مائل باستخدام عنصر em في HTML",
+        "scope": "html"
+    },
+    "form:personalia": {
+        "prefix": "قالب نموذج شخصي",
+        "body": [
+            "<form action=\"${1:/action_page.php}\" method=\"${2:post}\">",
+            " <fieldset>",
+            "  <legend>${3:البيانات الشخصية}:</legend>",
+            "  <label for=\"fname\">${4:الاسم}:</label>",
+            "  <input type=\"text\" id=\"fname\" name=\"fname\"><br><br>",
+            "  <label for=\"lname\">${5:اسم العائلة}:</label>",
+            "  <input type=\"text\" id=\"lname\" name=\"lname\"><br><br>",
+            "  <label for=\"email\">${6:البريد الالكتروني}:</label>",
+            "  <input type=\"email\" id=\"email\" name=\"email\"><br><br>",
+            "  <label for=\"birthday\">${7:Birthday}:التاريخ</label>",
+            "  <input type=\"date\" id=\"birthday\" name=\"birthday\"><br><br>",
+            "  <input type=\"submit\" value=\"${8:Submit}\">",
+            " </fieldset>",
+            "</form>"
+        ],
+        "description": "إضافة نموذج HTML يحتوي على حقول شخصية",
+        "scope": "html"
+    },
+    "input:date": {
+        "prefix": "حقل تاريخ",
+        "body": [
+            "<input type=\"date\" id=\"${1:birthday}\" name=\"${2:birthday}\" />"
+        ],
+        "description": "إضافة حقل إدخال لتحديد التاريخ",
+        "scope": "html"
+    },
+    "del:html": {
+        "prefix": "نص يتوسطه خط",
+        "body": [
+            "<del>${1:النص}</del>"
+        ],
+        "description": "إضافة نص يتوسطه خط باستخدام عنصر del في HTML",
+        "scope": "html"
+    },
+    "ins:html": {
+        "prefix": "نص مسطر",
+        "body": [
+            "<ins>${1:النص المضاف}</ins>"
+        ],
+        "description": "إضافة نص تحته خط باستخدام عنصر ins في HTML",
+        "scope": "html"
+    },
+    "label:html": {
+        "prefix": "وسم تسمية",
+        "body": [
+            "<label for=\"${1:inputId}\">${2:النص هنا}</label>"
+        ],
+        "description": "إضافة عنصر label لتسمية حقل إدخال في HTML",
+        "scope": "html"
+    },
+    "meter:html": {
+        "prefix": "مقياس نسبة",
+        "body": [
+            "<meter id=\"${1:meterId}\" value=\"${2:القيمة الحالية}\" min=\"${3:القيمة الدنيا}\" max=\"${4:القيمة القصوى}\">${5:الوصف هنا}</meter>"
+        ],
+        "description": "إضافة عنصر meter لعرض مقياس مع تلميحات بالمعنى",
+        "scope": "html"
+    },
+    "nav:html": {
+        "prefix": "قائمة شريط تنقل",
+        "body": [
+            "<nav>",
+            "  <a href=\"${1:/html/}\">${2:الرابط الأول}</a>",
+            "  <a href=\"${3:/css/}\">${4:الرابط الثاني}</a>",
+            "</nav>"
+        ],
+        "description": "قائمة من الروابط  كشريط عناوين",
+        "scope": "html"
+    },
+    "map:html": {
+        "prefix": "خريطة صورة",
+        "body": [
+            "<img src=\"${1:workplace.jpg}\" alt=\"${2:Workplace}\" usemap=\"#${3:workmap}\" width=\"${4:400}\" height=\"${5:379}\">",
+            "",
+            "<map name=\"${3:workmap}\">",
+            "  <area shape=\"rect\" coords=\"${6:34,44,270,350}\" alt=\"${7:Computer}\" href=\"${8:computer.htm}\">",
+            "  <area shape=\"rect\" coords=\"${9:290,172,333,250}\" alt=\"${10:Phone}\" href=\"${11:phone.htm}\">",
+            "  <area shape=\"circle\" coords=\"${12:337,300,44}\" alt=\"${13:Cup of coffee}\" href=\"${14:coffee.htm}\">",
+            "</map>"
+        ],
+        "description": "إضافة خريطة صورة مع مناطق تفاعلية باستخدام map و area",
+        "scope": "html"
+    },
+    "progress:html": {
+        "prefix": "شريط نسبةالتقدم",
+        "body": [
+            "<label for=\"${1:file}\">${2:وصف التقدم}:</label>",
+            "<progress id=\"${1:file}\" value=\"${3:القيمة الحالية}\" max=\"${4:القيمة القصوى}\">${5:النسبة المئوية}</progress>"
+        ],
+        "description": "إضافة شريط تقدم (progress) مع وسم label في HTML",
+        "scope": "html"
+    },
+    "s:html": {
+        "prefix": "نص مشطوب",
+        "body": [
+            "<s>${1:النص المشطوب}</s>"
+        ],
+        "description": "إضافة نص مشطوب باستخدام عنصر s في HTML",
+        "scope": "html"
+    },
+    "search:html": {
+        "prefix": "نموذج بحث",
+        "body": [
+            "<form role=\"search\">",
+            "  <label for=\"${1:fsrch}\" style=\"position:absolute;left:-9999px;\">${2:ابحث}</label>",
+            "  <input type=\"search\" name=\"${1:fsrch}\" id=\"${1:fsrch}\" placeholder=\"${3:ابحث هنا}\" />",
+            "</form>"
+        ],
+        "description": "إضافة عنصر search مع نموذج إدخال للبحث",
+        "scope": "html"
+    },
+    "svg:circle": {
+        "prefix": "دائرة",
+        "body": [
+            "<svg width=\"${1:100}\" height=\"${2:100}\">",
+            "  <circle cx=\"${3:50}\" cy=\"${4:50}\" r=\"${5:40}\" stroke=\"${6:green}\" stroke-width=\"${7:4}\" fill=\"${8:yellow}\" />",
+            "</svg>"
+        ],
+        "description": "إضافة عنصر SVG يحتوي على دائرة",
+        "scope": "html"
+    },
+    "svg:rect": {
+        "prefix": "مربع",
+        "body": [
+            "<svg width=\"${1:100}\" height=\"${2:100}\">",
+            "  <rect x=\"${3:10}\" y=\"${4:10}\" width=\"${5:80}\" height=\"${6:80}\" stroke=\"${7:blue}\" stroke-width=\"${8:4}\" fill=\"${9:red}\" />",
+            "</svg>"
+        ],
+        "description": "إضافة عنصر SVG يحتوي على مربع",
+        "scope": "html"
+    },
+    "svg:triangle": {
+        "prefix": "مثلث",
+        "body": [
+            "<svg width=\"${1:100}\" height=\"${2:100}\">",
+            "  <polygon points=\"${3:50,15} ${4:90,85} ${5:10,85}\" stroke=\"${6:black}\" stroke-width=\"${7:2}\" fill=\"${8:blue}\" />",
+            "</svg>"
+        ],
+        "description": "إضافة عنصر SVG يحتوي على مثلث",
+        "scope": "html"
+    },
+    "iframe:html": {
+        "prefix": "إطار مضمّن",
+        "body": [
+            "<iframe src=\"${1:https://www.example.com}\" width=\"${2:600}\" height=\"${3:400}\" frameborder=\"${4:0}\" allowfullscreen></iframe>"
+        ],
+        "description": "إضافة عنصر iframe لعرض محتوى مضمّن",
+        "scope": "html"
+    },
+    "embed:html": {
+        "prefix": "عنصر مضمّن",
+        "body": [
+            "<embed type=\"${1:image/jpg}\" src=\"${2:pic_trulli.jpg}\" width=\"${3:300}\" height=\"${4:200}\" />"
+        ],
+        "description": "إضافة عنصر embed لعرض محتوى مضمّن مثل صورة أو ملف",
+        "scope": "html"
+    },
+    "output:html": {
+        "prefix": "عنصر إخراج",
+        "body": [
+            "<form oninput=\"${1:x.value=parseInt(a.value)+parseInt(b.value)}\">",
+            "  <input type=\"range\" id=\"${2:a}\" value=\"${3:50}\">",
+            "  +<input type=\"number\" id=\"${4:b}\" value=\"${5:25}\">",
+            "  =<output name=\"${6:x}\" for=\"${7:a b}\"></output>",
+            "</form>"
+        ],
+        "description": "إضافة عنصر output مع نموذج إدخال لإجراء العمليات الحسابية",
+        "scope": "html"
+    },
+    "q:html": {
+        "prefix": "اقتباس قصير",
+        "body": [
+            "<q>${1:الاقتباس }</q>"
+        ],
+        "description": "إضافة عنصر q لاقتباس قصير في HTML",
+        "scope": "html"
+    },
+    "abbr:html": {
+        "prefix": "تليمح",
+        "body": [
+            "<abbr title=\"${1:التلميح}\">${2:النصر الظاهري}</abbr>"
+        ],
+        "description": "إضافة عنصر abbr لعرض اختصار مع عنوان توضيحي",
+        "scope": "html"
+    },
+    "date:min-max": {
+        "prefix": "تاريخ مع حد",
+        "body": [
+            "<label for=\"${1:dateInput}\">${2:اختر التاريخ}:</label>",
+            "<input type=\"date\" id=\"${1:dateInput}\" name=\"${1:dateInput}\" min=\"${3:2023-01-01}\" max=\"${4:2023-12-31}\">"
+        ],
+        "description": "إضافة حقل إدخال لتحديد التاريخ مع حد أدنى وحد أقصى",
+        "scope": "html"
+    }
+    ,
+    "meta:viewport-charset": {
+        "prefix": "ميتا charset/viewport",
+        "body": [
+            "<meta charset=\"UTF-8\">",
+            "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
+        ],
+        "description": "إضافة وسم meta لتهيئة charset و viewport",
+        "scope": "html"
+    },
+    "noscript:html": {
+        "prefix": "noscript",
+        "body": [
+            "<noscript>",
+            "  ${1:هذه الصفحة تحتاج جافا سكريبت لعرض محتواها}",
+            "</noscript>"
+        ],
+        "description": "إضافة وسم noscript لعرض محتوى عند تعطيل JS",
+        "scope": "html"
+    },
+    "strong:html": {
+        "prefix": "نص قوي",
+        "body": [
+            "<strong>${1:نص قوي}</strong>"
+        ],
+        "description": "إضافة نص بقوة (strong)",
+        "scope": "html"
+    },
+    "small:html": {
+        "prefix": "نص صغير",
+        "body": [
+            "<small>${1:نص صغير}</small>"
+        ],
+        "description": "إضافة نص صغير باستخدام small",
+        "scope": "html"
+    },
+    "cite:html": {
+        "prefix": "مرجع",
+        "body": [
+            "<cite>${1:المصدر}</cite>"
+        ],
+        "description": "إضافة عنصر cite لذكر المصادر",
+        "scope": "html"
+    },
+    "time:html": {
+        "prefix": "وقت",
+        "body": [
+            "<time datetime=\"${1:2023-01-01}\">${2:1 يناير 2023}</time>"
+        ],
+        "description": "إضافة عنصر time لتحديد تواريخ أو أوقات",
+        "scope": "html"
+    },
+    "details-summary": {
+        "prefix": "تفاصيل",
+        "body": [
+            "<details>",
+            "  <summary>${1:العنوان القابل للطي}</summary>",
+            "  ${2:المحتوى القابل للعرض عند الفتح}",
+            "</details>"
+        ],
+        "description": "إضافة عنصر details مع summary لعرض محتوى قابل للطَي",
+        "scope": "html"
+    },
+    "template:html": {
+        "prefix": "قالب",
+        "body": [
+            "<template id=\"${1:tpl}\">",
+            "  ${2:محتوى القالب}\n</template>"
+        ],
+        "description": "إضافة عنصر template لحفظ محتوى غير مرئي حتى الاستنساخ",
+        "scope": "html"
+    },
+    "data:html": {
+        "prefix": "بيانات",
+        "body": [
+            "<data value=\"${1:قيمة}\">${2:النص}</data>"
+        ],
+        "description": "إضافة عنصر data لربط قيمة بيانات بعنصر نصي",
+        "scope": "html"
+    },
+    "figure-figcaption": {
+        "prefix": "شكل مع عنوان",
+        "body": [
+            "<figure>",
+            "  <img src=\"${1:img.jpg}\" alt=\"${2:وصف}\">",
+            "  <figcaption>${3:تعليق على الصورة}</figcaption>",
+            "</figure>"
+        ],
+        "description": "إضافة عنصر figure مع figcaption لوصف الوسائط",
+        "scope": "html"
+    },
+    "semantic:sections": {
+        "prefix": "بنية الصفحة",
+        "body": [
+            "<header>${1:رأس الصفحة}</header>",
+            "<nav>${2:روابط التنقل}</nav>",
+            "<main>${3:المحتوى الرئيسي}</main>",
+            "<aside>${4:محتوى جانبي}</aside>",
+            "<footer>${5:تذييل الصفحة}</footer>"
+        ],
+        "description": "قالب لهيكلية الصفحة باستخدام العناصر الدلالية",
+        "scope": "html"
+    }
+}

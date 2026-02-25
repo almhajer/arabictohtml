@@ -1,0 +1,62 @@
+{
+  "name": "arabictohtml",
+  "displayName": "Arabic to html",
+  "description": "البرمجة باللغة العربية لعناصر الهوتمل",
+  "version": "0.0.7",
+  "engines": {
+    "vscode": "^1.98.0"
+  },
+  "publisher": "Arabic-language",
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  },
+  "galleryBanner": {
+    "color": "#007acc",
+    "theme": "dark"
+  },
+  "icon": "aiarabictohtml.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/almhajer/ArabicToHtml.git"
+  },
+  "homepage": "https://github.com/almhajer/ArabicToHtml",
+  "readme": "README.md",
+  "bugs": {
+    "url": "https://github.com/almhajer/arabictohtml/issues"
+  },
+  "keywords": [
+    "Arabic",
+    "html",
+    "HTML",
+    "Translation",
+    "arabictohtml",
+    "عربي",
+    "هوتمل بالعربي",
+    "سنابيت",
+    "snippets",
+    "VSCode",
+    "visual-studio-code",
+    "rtl",
+    "accessibility",
+    "arabic-html"
+  ],
+  "searchKeywords": [
+    "عربي",
+    "هوتمل",
+    "سنابيت",
+    "html-arabic",
+    "arabic-snippets"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Almhajer"
+  }
+}
