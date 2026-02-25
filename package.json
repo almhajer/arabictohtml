@@ -2,7 +2,7 @@
   "name": "arabictohtml",
   "displayName": "ArabicToHtml",
   "description": "Arabic snippets for HTML in VS Code - مقتطفات عربية لعناصر HTML",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "engines": {
     "vscode": "^1.98.0"
   },

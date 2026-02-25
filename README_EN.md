@@ -92,7 +92,7 @@ Command-line / VSIX
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-0.0.7-blue?style=for-the-badge&logo=visual-studio-code)
+![Version](https://img.shields.io/badge/version-0.0.8-blue?style=for-the-badge&logo=visual-studio-code)
 ![VS Code](https://img.shields.io/badge/VS%20Code-1.0.0+-green?style=for-the-badge&logo=visual-studio-code)
 ![License](https://img.shields.io/badge/license-MIT-orange?style=for-the-badge&logo=opensource)
 
@@ -128,8 +128,8 @@ This file is the English translation of the extension README. It provides a conc
 To install from a local VSIX:
 
 ```bash
-# install local VSIX
-code --install-extension path/to/arabictohtml-0.0.7.vsix
+# install local VSIX (replace version accordingly)
+code --install-extension path/to/arabictohtml-0.0.8.vsix
 ```
 
 ---
@@ -251,6 +251,7 @@ code --uninstall-extension arabictohtml
 
 ## Changelog
 
+- v0.0.8: added CSS/JS/HTML snippets, translated placeholders and choice lists, removed unused files, updated docs.
 - v0.0.7: fixed snippet issues, added semantic elements, improved README and added search-related snippets.
 
 ---

@@ -4,6 +4,13 @@ All notable changes to the "arabictohtml" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.8]
+
+- Added new CSS, JavaScript and HTML snippets (English + Arabic)
+- Translated internal placeholders and choice lists to English
+- Removed unused environment files and cleaned repository structure
+- Updated READMEs and packaging instructions
+
 ## [0.0.7]
 
 - Updated README files in English and Arabic
@@ -13,4 +20,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Initial release
+-- Initial release
