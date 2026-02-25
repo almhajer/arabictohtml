@@ -46,18 +46,26 @@
     "visual-studio-code",
     "rtl",
     "accessibility",
-    "arabic-html"
+    "arabic-html",
+    "web-development",
+    "productivity"
   ],
   "searchKeywords": [
     "عربي",
     "هوتمل",
     "سنابيت",
     "html-arabic",
-    "arabic-snippets"
+    "arabic-snippets",
+    "العربية"
   ],
   "license": "MIT",
   "author": {
-    "name": "Almhajer"
+    "name": "Almhajer",
+    "email": "dev@arabictohtml.local"
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
   },
   "devDependencies": {
     "vsce": "^2.15.0"
