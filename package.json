@@ -58,5 +58,8 @@
   "license": "MIT",
   "author": {
     "name": "Almhajer"
+  },
+  "devDependencies": {
+    "vsce": "^2.15.0"
   }
 }
