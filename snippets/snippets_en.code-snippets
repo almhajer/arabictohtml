@@ -161,8 +161,8 @@
         "prefix": "unordered",
         "body": [
             "<ul>",
-            "    <li>${1:العنصر}</li>",
-            "    <li>${2:العنصر}</li>",
+            "    <li>${1:item}</li>",
+            "    <li>${2:item}</li>",
             "</ul>"
         ],
         "description": "Insert an unordered (bulleted) list",
@@ -360,7 +360,7 @@
         "prefix": "paragraph",
         "body": [
             "<p style=\"font-size: ${1:16}px; color: ${2:black}; text-align: ${3:left}; line-height: ${4:1.5};\">",
-            "    ${5:نص الفقرة هنا}",
+            "    ${5:paragraph text here}",
             "</p>"
         ],
         "description": "Insert a paragraph element with font, color and alignment"
@@ -431,9 +431,9 @@
         "prefix": "form",
         "body": [
             "<form action=\"${1:submit.php}\" method=\"${2:post}\" ${3:enctype=\"multipart/form-data\"}>",
-            "    <label for=\"${4:inputId}\">${5:اسم الحقل}</label>",
+            "    <label for=\"${4:inputId}\">${5:field name}</label>",
             "    <input type=\"${6:text}\" name=\"${7:inputName}\" id=\"${4:inputId}\" placeholder=\"${8:Type here}\" />",
-            "    <button type=\"${9:submit}\">${10:إرسال}</button>",
+            "    <button type=\"${9:submit}\">${10:send}</button>",
             "</form>"
         ],
         "description": "Insert an HTML form with an input and submit button",
@@ -443,7 +443,7 @@
         "prefix": "h1",
         "body": [
             "<h1 style=\"font-size: ${1:32}px; color: ${2:black}; text-align: ${3:left};\">",
-            "    ${4:عنوان هنا}",
+            "    ${4:title here}",
             "</h1>"
         ],
         "description": "Insert an h1 heading with styling",
@@ -453,7 +453,7 @@
         "prefix": "h2",
         "body": [
             "<h2 style=\"font-size: ${1:24}px; color: ${2:black}; text-align: ${3:left};\">",
-            "    ${4:عنوان هنا}",
+            "    ${4:title here}",
             "</h2>"
         ],
         "description": "Insert an h2 heading with styling",
@@ -463,7 +463,7 @@
         "prefix": "h3",
         "body": [
             "<h3 style=\"font-size: ${1:20}px; color: ${2:black}; text-align: ${3:left};\">",
-            "    ${4:عنوان هنا}",
+            "    ${4:title here}",
             "</h3>"
         ],
         "description": "Insert an h3 heading with styling",
@@ -473,7 +473,7 @@
         "prefix": "h4",
         "body": [
             "<h4 style=\"font-size: ${1:18}px; color: ${2:black}; text-align: ${3:left};\">",
-            "    ${4:عنوان هنا}",
+            "    ${4:title here}",
             "</h4>"
         ],
         "description": "Insert an h4 heading with styling",
@@ -483,7 +483,7 @@
         "prefix": "h5",
         "body": [
             "<h5 style=\"font-size: ${1:16}px; color: ${2:black}; text-align: ${3:left};\">",
-            "    ${4:عنوان هنا}",
+            "    ${4:title here}",
             "</h5>"
         ],
         "description": "Insert an h5 heading with styling",
@@ -493,7 +493,7 @@
         "prefix": "h6",
         "body": [
             "<h6 style=\"font-size: ${1:14}px; color: ${2:black}; text-align: ${3:left};\">",
-            "    ${4:عنوان هنا}",
+            "    ${4:title here}",
             "</h6>"
         ],
         "description": "Insert an h6 heading with styling",
@@ -558,8 +558,8 @@
         "prefix": "menu",
         "body": [
             "<menu>",
-            "    <li>${1:العنصر الأول}</li>",
-            "    <li>${2:العنصر الثاني}</li>",
+            "    <li>${1:first item}</li>",
+            "    <li>${2:second item}</li>",
             "</menu>"
         ],
         "description": "Insert a simple menu element",
@@ -568,7 +568,7 @@
     "list-item:html": {
         "prefix": "list",
         "body": [
-            "<li>${1:العنصر}</li>"
+            "<li>${1:item}</li>"
         ],
         "description": "Insert a list item (li)",
         "scope": "html"
@@ -579,7 +579,7 @@
             "<picture>",
             "    <source srcset=\"${1:example-large.jpg}\" media=\"(min-width: ${2:800px})\">",
             "    <source srcset=\"${3:example-medium.jpg}\" media=\"(min-width: ${4:400px})\">",
-            "    <img src=\"${5:example-small.jpg}\" alt=\"${6:وصف الimage}\">",
+            "    <img src=\"${5:example-small.jpg}\" alt=\"${6:image description}\">",
             "</picture>"
         ],
         "description": "Insert a picture element for responsive images",
@@ -625,12 +625,12 @@
         "body": [
             "<form action=\"${1:/action_page.php}\" method=\"${2:post}\">",
             " <fieldset>",
-            "  <legend>${3:البيانات الشخصية}:</legend>",
-            "  <label for=\"fname\">${4:الاسم}:</label>",
+            "  <legend>${3:personal details}:</legend>",
+            "  <label for=\"fname\">${4:name}:</label>",
             "  <input type=\"text\" id=\"fname\" name=\"fname\"><br><br>",
-            "  <label for=\"lname\">${5:اسم العائلة}:</label>",
+            "  <label for=\"lname\">${5:last name}:</label>",
             "  <input type=\"text\" id=\"lname\" name=\"lname\"><br><br>",
-            "  <label for=\"email\">${6:البريد الالكتروني}:</label>",
+            "  <label for=\"email\">${6:email}:</label>",
             "  <input type=\"email\" id=\"email\" name=\"email\"><br><br>",
             "  <label for=\"birthday\">${7:Birthday}:التاريخ</label>",
             "  <input type=\"date\" id=\"birthday\" name=\"birthday\"><br><br>",
@@ -685,8 +685,8 @@
         "prefix": "nav",
         "body": [
             "<nav>",
-            "  <a href=\"${1:/html/}\">${2:الlink الأول}</a>",
-            "  <a href=\"${3:/css/}\">${4:الlink الثاني}</a>",
+            "  <a href=\"${1:/html/}\">${2:first link}</a>",
+            "  <a href=\"${3:/css/}\">${4:second link}</a>",
             "</nav>"
         ],
         "description": "Insert a navigation bar with links",
@@ -872,8 +872,8 @@
         "prefix": "details",
         "body": [
             "<details>",
-            "  <summary>${1:title القابل للطي}</summary>",
-            "  ${2:المحتوى القابل للعرض عند الفتح}",
+            "  <summary>${1:collapsable title}</summary>",
+            "  ${2:content shown when open}",
             "</details>"
         ],
         "description": "Insert details/summary collapsible content",
@@ -883,7 +883,7 @@
         "prefix": "template",
         "body": [
             "<template id=\"${1:tpl}\">",
-            "  ${2:محتوى القالب}\n</template>"
+            "  ${2:template content}\n</template>"
         ],
         "description": "Insert a template element for reusable markup",
         "scope": "html"
@@ -912,7 +912,7 @@
         "body": [
             "<header>${1:رأس الصفحة}</header>",
             "<nav>${2:روابط التنقل}</nav>",
-            "<main>${3:المحتوى الرئيسي}</main>",
+            "<main>${3:main content}</main>",
             "<aside>${4:محتوى جانبي}</aside>",
             "<footer>${5:تذييل الصفحة}</footer>"
         ],
@@ -965,19 +965,19 @@
         "body": [
             "<div class=\"message-box success\">",
             "  <span class=\"icon\">✓</span>",
-            "  <p>${1:الرسالة نجحت}</p>",
+            "  <p>${1:message succeeded}</p>",
             "</div>",
             "<div class=\"message-box error\">",
             "  <span class=\"icon\">✗</span>",
-            "  <p>${2:حدث خطأ ما}</p>",
+            "  <p>${2:an error occurred}</p>",
             "</div>",
             "<div class=\"message-box warning\">",
             "  <span class=\"icon\">!</span>",
-            "  <p>${3:تحذير}</p>",
+            "  <p>${3:warning}</p>",
             "</div>",
             "<div class=\"message-box info\">",
             "  <span class=\"icon\">ⓘ</span>",
-            "  <p>${4:معلومة}</p>",
+            "  <p>${4:info}</p>",
             "</div>"
         ],
         "description": "Colored message boxes (success, error, warning, info)",
@@ -988,7 +988,7 @@
         "body": [
             "<div class=\"glass-card\">",
             "  <h2>${1:title}</h2>",
-            "  <p>${2:المحتوى هنا}</p>",
+            "  <p>${2:content here}</p>",
             "</div>",
             "",
             "<style>",
@@ -1091,7 +1091,7 @@
             "      <button class=\"close-btn\" onclick=\"closeModal()\">&times;</button>",
             "    </div>",
             "    <div class=\"modal-body\">",
-            "      <p>${3:محتوى الرسالة}</p>",
+            "      <p>${3:message content}</p>",
             "    </div>",
             "    <div class=\"modal-footer\">",
             "      <button class=\"btn btn-success\" onclick=\"closeModal()\">موافقة</button>",
@@ -1194,7 +1194,7 @@
             "  <button id=\"zoomOut\" class=\"zoom-btn\">−</button>",
             "</div>",
             "<div id=\"zoomContent\" class=\"zoom-content\">",
-            "  ${1:المحتوى هنا}",
+            "  ${1:content here}",
             "</div>",
             "",
             "<style>",
@@ -1223,5 +1223,226 @@
         ],
         "description": "Controls to zoom in/out of content",
         "scope": "html"
+    }
+,
+    "css:flex-container": {
+        "prefix": "flex",
+        "body": [
+            "/* Flex container with common utilities */",
+            ".container {",
+            "  display: flex;",
+            "  flex-direction: ${1:row}; /* row | column */",
+            "  justify-content: ${2:space-between}; /* flex-start | center | space-between */",
+            "  align-items: ${3:center}; /* flex-start | center | stretch */",
+            "  gap: ${4:16px};",
+            "}"
+        ],
+        "description": "Create a flexible container with common alignment options",
+        "scope": "css"
+    },
+    "css:grid-layout": {
+        "prefix": "grid",
+        "body": [
+            "/* Responsive CSS Grid layout */",
+            ".grid {",
+            "  display: grid;",
+            "  grid-template-columns: repeat(${1:3}, 1fr);",
+            "  gap: ${2:16px};",
+            "}",
+            "@media (max-width: ${3:768px}) {",
+            "  .grid { grid-template-columns: repeat(${4:1}, 1fr); }",
+            "}"
+        ],
+        "description": "Create a responsive CSS Grid layout with breakpoint example",
+        "scope": "css"
+    },
+    "css:keyframes": {
+        "prefix": "keyframes",
+        "body": [
+            "@keyframes ${1:slideIn} {",
+            "  from { opacity: 0; transform: translateY(${2:10px}); }",
+            "  to   { opacity: 1; transform: translateY(0); }",
+            "}",
+            ".animated {",
+            "  animation: ${1:slideIn} ${3:0.4s} ${4:ease};",
+            "}"
+        ],
+        "description": "Create keyframes and attach animation class",
+        "scope": "css"
+    },
+    "js:event-listener": {
+        "prefix": "on",
+        "body": [
+            "// Add event listener to an element",
+            "const ${1:el} = document.querySelector('${2:.selector}');",
+            "${1:el}.addEventListener('${3:click}', (event) => {",
+            "  ${4:// handle event}",
+            "});"
+        ],
+        "description": "Add a DOM event listener (click, input, etc.)",
+        "scope": "javascript,js"
+    },
+    "js:fetch-async": {
+        "prefix": "fetch",
+        "body": [
+            "// Async fetch template",
+            "async function ${1:fetchData}(${2:url}) {",
+            "  try {",
+            "    const res = await fetch(${2:url});",
+            "    if (!res.ok) throw new Error(res.statusText);",
+            "    const data = await res.json();",
+            "    return data;",
+            "  } catch (err) {",
+            "    console.error(err);",
+            "    throw err;",
+            "  }",
+            "}"
+        ],
+        "description": "Async/await fetch wrapper with error handling",
+        "scope": "javascript,js"
+    },
+    "js:debounce": {
+        "prefix": "debounce",
+        "body": [
+            "// Debounce utility",
+            "function ${1:debounce}(fn, wait = ${2:250}) {",
+            "  let t;",
+            "  return (...args) => {",
+            "    clearTimeout(t);",
+            "    t = setTimeout(() => fn.apply(this, args), wait);",
+            "  };",
+            "}"
+        ],
+        "description": "Create a debounce wrapper for input/resize handlers",
+        "scope": "javascript,js"
+    },
+    "html:aria-button": {
+        "prefix": "aria-btn",
+        "body": [
+            "<button role=\"button\" aria-label=\"${1:label}\" aria-pressed=\"${2:false}\">${3:Button}</button>"
+        ],
+        "description": "Accessible button with ARIA attributes",
+        "scope": "html"
+    },
+    "html:data-attribute": {
+        "prefix": "data-attr",
+        "body": [
+            "<div data-${1:key}=\"${2:value}\">${3:content}</div>"
+        ],
+        "description": "Element with a custom data-attribute used for JS hooks",
+        "scope": "html"
+    },
+    "html:meta-robots": {
+        "prefix": "meta-robots",
+        "body": [
+            "<meta name=\"robots\" content=\"${1:index,follow}\">"
+        ],
+        "description": "Meta robots tag to control indexing/crawling",
+        "scope": "html"
+    }
+    ,
+    "css:variables": {
+        "prefix": "vars",
+        "body": [
+            "/* CSS variables (custom properties) */",
+            ":root {",
+            "  --space: ${1:16px};",
+            "  --color-primary: ${2:#007BFF};",
+            "  --color-accent: ${3:#FF4081};",
+            "}",
+            "body {",
+            "  margin: 0; padding: 0; font-family: ${4:system-ui, sans-serif};",
+            "  color: var(--color-primary);",
+            "}"
+        ],
+        "description": "Define and use CSS custom properties (variables)",
+        "scope": "css"
+    },
+    "css:reset": {
+        "prefix": "reset",
+        "body": [
+            "/* Minimal CSS reset */",
+            "*, *::before, *::after { box-sizing: border-box; }",
+            "html, body { height: 100%; }",
+            "body { margin: 0; line-height: 1.5; -webkit-font-smoothing: antialiased; }"
+        ],
+        "description": "Minimal CSS reset / normalize rules",
+        "scope": "css"
+    },
+    "css:button-primary": {
+        "prefix": "btn",
+        "body": [
+            "/* Primary button styles */",
+            ".btn-primary {",
+            "  display: inline-block; padding: ${1:10px 16px}; border-radius: ${2:6px};",
+            "  background: var(--color-primary); color: white; border: none; cursor: pointer;",
+            "  transition: transform 0.12s ease, box-shadow 0.12s ease;",
+            "}",
+            ".btn-primary:active { transform: translateY(1px); }"
+        ],
+        "description": "Primary button CSS with hover/active feedback",
+        "scope": "css"
+    },
+    "html:link-rel": {
+        "prefix": "link-css",
+        "body": [
+            "<link rel=\"stylesheet\" href=\"${1:styles.css}\">"
+        ],
+        "description": "Link to an external CSS stylesheet",
+        "scope": "html"
+    },
+    "html:script-defer": {
+        "prefix": "script",
+        "body": [
+            "<script src=\"${1:app.js}\" defer></script>"
+        ],
+        "description": "Include an external script with defer attribute",
+        "scope": "html"
+    },
+    "html:input-attrs": {
+        "prefix": "input-attrs",
+        "body": [
+            "<input type=\"${1:text}\" name=\"${2:name}\" id=\"${3:id}\" placeholder=\"${4:placeholder}\" required ${5:autocomplete=\"on\"}>"
+        ],
+        "description": "Input field with common attributes (required, autocomplete, placeholder)",
+        "scope": "html"
+    },
+    "js:dom-ready": {
+        "prefix": "domready",
+        "body": [
+            "// Run code when DOM is ready",
+            "document.addEventListener('DOMContentLoaded', () => {",
+            "  ${1:// init code}",
+            "});"
+        ],
+        "description": "DOMContentLoaded handler to initialize scripts",
+        "scope": "javascript,js"
+    },
+    "js:local-storage": {
+        "prefix": "ls",
+        "body": [
+            "// Simple localStorage wrapper",
+            "function ${1:setItem}(key, value) {",
+            "  localStorage.setItem(key, JSON.stringify(value));",
+            "}",
+            "function ${2:getItem}(key) {",
+            "  const v = localStorage.getItem(key); return v ? JSON.parse(v) : null;",
+            "}"
+        ],
+        "description": "Save and read JSON values from localStorage",
+        "scope": "javascript,js"
+    },
+    "js:event-delegate": {
+        "prefix": "delegate",
+        "body": [
+            "// Event delegation helper",
+            "document.querySelector('${1:container}').addEventListener('${2:click}', function (e) {",
+            "  const target = e.target.closest('${3:.btn}');",
+            "  if (!target) return;",
+            "  ${4:// handle delegated event}",
+            "});"
+        ],
+        "description": "Delegate events from a parent container to matching children",
+        "scope": "javascript,js"
     }
 }

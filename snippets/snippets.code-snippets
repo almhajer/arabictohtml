@@ -1224,5 +1224,208 @@
         ],
         "description": "أدوات التحكم بالتكبير والتصغير للعناصر",
         "scope": "html"
+    },
+    "css:flex-container": {
+        "prefix": "flex",
+        "body": [
+            "/* حاوية فليكس مع خيارات شائعة */",
+            ".container {",
+            "  display: flex;",
+            "  flex-direction: ${1:row}; /* row | column */",
+            "  justify-content: ${2:space-between}; /* flex-start | center | space-between */",
+            "  align-items: ${3:center}; /* flex-start | center | stretch */",
+            "  gap: ${4:16px};",
+            "}"
+        ],
+        "description": "إنشاء حاوية CSS مرنة مع خيارات محاذاة شائعة",
+        "scope": "css"
+    },
+    "css:grid-layout": {
+        "prefix": "grid",
+        "body": [
+            "/* شبكة CSS استجابة */",
+            ".grid {",
+            "  display: grid;",
+            "  grid-template-columns: repeat(${1:3}, 1fr);",
+            "  gap: ${2:16px};",
+            "}",
+            "@media (max-width: ${3:768px}) {",
+            "  .grid { grid-template-columns: repeat(${4:1}, 1fr); }",
+            "}"
+        ],
+        "description": "إنشاء تخطيط CSS Grid استجابي مع مثال لنقطة الانهيار",
+        "scope": "css"
+    },
+    "css:keyframes": {
+        "prefix": "keyframes",
+        "body": [
+            "@keyframes ${1:slideIn} {",
+            "  from { opacity: 0; transform: translateY(${2:10px}); }",
+            "  to   { opacity: 1; transform: translateY(0); }",
+            "}",
+            ".animated {",
+            "  animation: ${1:slideIn} ${3:0.4s} ${4:ease};",
+            "}"
+        ],
+        "description": "إنشاء keyframes وتطبيقها عبر كلاس متحرك",
+        "scope": "css"
+    },
+    "js:event-listener": {
+        "prefix": "on",
+        "body": [
+            "// إضافة مستمع حدث لعنصر DOM",
+            "const ${1:el} = document.querySelector('${2:.selector}');",
+            "${1:el}.addEventListener('${3:click}', (event) => {",
+            "  ${4:// معالج الحدث}",
+            "});"
+        ],
+        "description": "إضافة مستمع حدث DOM (click, input, ...)",
+        "scope": "javascript,js"
+    },
+    "js:fetch-async": {
+        "prefix": "fetch",
+        "body": [
+            "// قالب fetch باستخدام async/await",
+            "async function ${1:fetchData}(${2:url}) {",
+            "  try {",
+            "    const res = await fetch(${2:url});",
+            "    if (!res.ok) throw new Error(res.statusText);",
+            "    const data = await res.json();",
+            "    return data;",
+            "  } catch (err) {",
+            "    console.error(err);",
+            "    throw err;",
+            "  }",
+            "}"
+        ],
+        "description": "قالب fetch مع معالجة الأخطاء باستخدام async/await",
+        "scope": "javascript,js"
+    },
+    "js:debounce": {
+        "prefix": "debounce",
+        "body": [
+            "// دالة debounce للاستخدام مع input/resize",
+            "function ${1:debounce}(fn, wait = ${2:250}) {",
+            "  let t;",
+            "  return (...args) => {",
+            "    clearTimeout(t);",
+            "    t = setTimeout(() => fn.apply(this, args), wait);",
+            "  };",
+            "}"
+        ],
+        "description": "إنشاء غلاف debounce لوظائف الإدخال أو تغيير الحجم",
+        "scope": "javascript,js"
+    },
+    "html:aria-button": {
+        "prefix": "aria-btn",
+        "body": [
+            "<button role=\"button\" aria-label=\"${1:label}\" aria-pressed=\"${2:false}\">${3:زر}</button>"
+        ],
+        "description": "زر متوافق مع معايير الوصول (ARIA)",
+        "scope": "html"
+    },
+    "html:data-attribute": {
+        "prefix": "data-attr",
+        "body": [
+            "<div data-${1:key}=\"${2:value}\">${3:المحتوى}</div>"
+        ],
+        "description": "عنصر يحتوي على data-attribute مخصص لاستخدامه في جافا سكربت",
+        "scope": "html"
+    },
+    "html:meta-robots": {
+        "prefix": "meta-robots",
+        "body": [
+            "<meta name=\"robots\" content=\"${1:index,follow}\">"
+        ],
+        "description": "وسم meta للتحكم بفهرسة الصفحات من محركات البحث",
+        "scope": "html"
+    }
+    ,
+    "css:variables": {
+        "prefix": "متغيرات",
+        "body": [
+            "/* تعريف متغيرات CSS */",
+            ":root {",
+            "  --space: ${1:16px};",
+            "  --color-primary: ${2:#007BFF};",
+            "}",
+            "body { color: var(--color-primary); }"
+        ],
+        "description": "تعريف واستخدام متغيرات CSS (custom properties)",
+        "scope": "css"
+    },
+    "css:reset": {
+        "prefix": "تهيئة-css",
+        "body": [
+            "/* قواعد تهيئة بسيطة */",
+            "*, *::before, *::after { box-sizing: border-box; }",
+            "html, body { height: 100%; }",
+            "body { margin: 0; line-height: 1.5; }"
+        ],
+        "description": "تهيئة CSS بسيطة لإزالة الهوامش الافتراضية",
+        "scope": "css"
+    },
+    "css:button-primary": {
+        "prefix": "زر",
+        "body": [
+            ".btn-primary {",
+            "  padding: ${1:10px 16px}; border-radius: ${2:6px}; background: var(--color-primary); color: white;",
+            "}"
+        ],
+        "description": "نمط زر أساسي مع تأثيرات بسيطة",
+        "scope": "css"
+    },
+    "html:link-rel": {
+        "prefix": "ربط-css",
+        "body": [
+            "<link rel=\"stylesheet\" href=\"${1:styles.css}\">"
+        ],
+        "description": "ربط ملف CSS خارجي",
+        "scope": "html"
+    },
+    "html:script-defer": {
+        "prefix": "سكربت",
+        "body": [
+            "<script src=\"${1:app.js}\" defer></script>"
+        ],
+        "description": "ضم ملف جافا سكربت خارجي مع السمة defer",
+        "scope": "html"
+    },
+    "html:input-attrs": {
+        "prefix": "حقل-مواصفات",
+        "body": [
+            "<input type=\"${1:text}\" name=\"${2:name}\" id=\"${3:id}\" placeholder=\"${4:نص توضيحي}\" required ${5:autocomplete=\"on\"}>"
+        ],
+        "description": "حقل إدخال مع السمات الشائعة (required, placeholder)",
+        "scope": "html"
+    },
+    "js:dom-ready": {
+        "prefix": "DOMContentLoaded",
+        "body": [
+            "document.addEventListener('DOMContentLoaded', () => {",
+            "  ${1:// تهيئة الكود}",
+            "});"
+        ],
+        "description": "استدعاء عند اكتمال تحميل DOM",
+        "scope": "javascript,js"
+    },
+    "js:local-storage": {
+        "prefix": "localstorage",
+        "body": [
+            "function ${1:setItem}(key, value) { localStorage.setItem(key, JSON.stringify(value)); }",
+            "function ${2:getItem}(key) { const v = localStorage.getItem(key); return v ? JSON.parse(v) : null; }"
+        ],
+        "description": "حفظ وقراءة قيم JSON من localStorage",
+        "scope": "javascript,js"
+    },
+    "js:event-delegate": {
+        "prefix": "delegation",
+        "body": [
+            "document.querySelector('${1:container}').addEventListener('${2:click}', function (e) {",
+            "  const target = e.target.closest('${3:.btn}'); if (!target) return; ${4:// تعامل مع الحدث}",
+            "});"
+        ],
+        "description": "تفويض الأحداث من عنصر أب للعناصر الفرعية",
+        "scope": "javascript,js"
     }
 }
