@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-0.0.8-blue?style=for-the-badge&logo=visual-studio-code)
+![Version](https://img.shields.io/badge/version-0.0.7-blue?style=for-the-badge&logo=visual-studio-code)
 ![VS Code](https://img.shields.io/badge/VS%20Code-1.0.0+-green?style=for-the-badge&logo=visual-studio-code)
 ![License](https://img.shields.io/badge/license-MIT-orange?style=for-the-badge&logo=opensource)
 
@@ -130,7 +130,7 @@ SVG — دائرة بسيطة (أدخل `دائرة`):
 
 ```bash
 # تثبيت ملف VSIX محليًا
-code --install-extension path/to/arabictohtml-0.0.8.vsix
+code --install-extension path/to/arabictohtml-0.0.7.vsix
 
 # لإزالة
 code --uninstall-extension arabictohtml
@@ -157,7 +157,7 @@ code --uninstall-extension arabictohtml
 
 ## سجل التغييرات
 
-- v0.0.8: إصلاح سنابيتات، إضافة عناصر جديدة، تحسين README، إضافة مفاتيح بحث.
+- v0.0.7: إصلاح سنابيتات، إضافة عناصر جديدة، تحسين README، إضافة مفاتيح بحث.
 
 
 ---

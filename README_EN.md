@@ -23,7 +23,7 @@ Or install from a local `.vsix` file:
 
 ```bash
 # install local VSIX
-code --install-extension path/to/arabictohtml-0.0.8.vsix
+code --install-extension path/to/arabictohtml-0.0.7.vsix
 ```
 
 Usage
@@ -92,7 +92,7 @@ Command-line / VSIX
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-0.0.8-blue?style=for-the-badge&logo=visual-studio-code)
+![Version](https://img.shields.io/badge/version-0.0.7-blue?style=for-the-badge&logo=visual-studio-code)
 ![VS Code](https://img.shields.io/badge/VS%20Code-1.0.0+-green?style=for-the-badge&logo=visual-studio-code)
 ![License](https://img.shields.io/badge/license-MIT-orange?style=for-the-badge&logo=opensource)
 
@@ -129,7 +129,7 @@ To install from a local VSIX:
 
 ```bash
 # install local VSIX
-code --install-extension path/to/arabictohtml-0.0.8.vsix
+code --install-extension path/to/arabictohtml-0.0.7.vsix
 ```
 
 ---
@@ -224,7 +224,7 @@ Tips:
 
 ```bash
 # install from file
-code --install-extension arabictohtml-0.0.8.vsix
+code --install-extension arabictohtml-0.0.7.vsix
 
 # uninstall
 code --uninstall-extension arabictohtml
@@ -251,7 +251,7 @@ code --uninstall-extension arabictohtml
 
 ## Changelog
 
-- v0.0.8: fixed snippet issues, added semantic elements, improved README and added search-related snippets.
+- v0.0.7: fixed snippet issues, added semantic elements, improved README and added search-related snippets.
 
 ---
 
