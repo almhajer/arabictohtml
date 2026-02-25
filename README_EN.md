@@ -186,6 +186,48 @@ SVG — circle (type `دائرة`):
 
 ---
 
+## New snippets in v0.0.8
+
+The following new snippet prefixes were added in v0.0.8 (English and Arabic variants included in the extension). Type the prefix in an HTML/CSS/JS file and press <kbd>Tab</kbd> to expand.
+
+- CSS
+  - `vars` — define CSS custom properties (variables)
+  - `reset` — minimal CSS reset/normalize
+  - `flex` — flex container utilities
+  - `grid` — responsive grid layout with breakpoint
+  - `keyframes` — keyframes and animation class
+  - `btn` — primary button styles
+
+- HTML
+  - `link-css` — link to external stylesheet
+  - `script` — include external script with `defer`
+  - `input-attrs` — input with common attributes (placeholder, required)
+  - `aria-btn` — accessible button with ARIA attributes
+  - `data-attr` — element with `data-*` attribute for JS hooks
+  - `meta-robots` — meta robots tag example
+
+- JavaScript
+  - `on` — add an event listener to an element
+  - `fetch` — async/await fetch wrapper with error handling
+  - `debounce` — debounce utility for input/resize handlers
+  - `domready` — `DOMContentLoaded` initializer
+  - `ls` — simple `localStorage` save/load helpers
+  - `delegate` — event delegation helper
+
+Examples
+
+Type `vars` then <kbd>Tab</kbd> to insert CSS variables template. Type `on` then <kbd>Tab</kbd> to insert an event listener skeleton.
+
+```html
+<!-- Example: link stylesheet -->
+<link rel="stylesheet" href="styles.css">
+
+<!-- Example: include deferred script -->
+<script src="app.js" defer></script>
+```
+
+These snippets are available in both `snippets/snippets.code-snippets` and `snippets/snippets_en.code-snippets`.
+
 ## Quality and organization improvements
 
 - Fixed snippets with unclosed tags.

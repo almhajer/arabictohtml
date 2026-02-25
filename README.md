@@ -91,6 +91,48 @@ SVG — دائرة بسيطة (أدخل `دائرة`):
 
 ---
 
+## سنابيتات جديدة في الإصدار 0.0.8
+
+أُضيفت في هذا الإصدار مجموعة سنابيتات جديدة تغطي CSS وHTML وJavaScript. اكتب الـ `prefix` واضغط <kbd>Tab</kbd> لتوسيع السنابيت.
+
+- CSS
+  - `vars` — تعريف متغيرات CSS (custom properties)
+  - `reset` — تهيئة CSS بسيطة
+  - `flex` — حاوية Flex مع خيارات محاذاة
+  - `grid` — شبكة CSS استجابة مع نقطة كسر
+  - `keyframes` — إنشاء keyframes وكلاس للأنيميشن
+  - `btn` — أنماط زر أساسي
+
+- HTML
+  - `link-css` — ربط ملف CSS خارجي
+  - `script` — تضمين سكربت خارجي مع `defer`
+  - `input-attrs` — حقل إدخال مع سمات شائعة (placeholder, required)
+  - `aria-btn` — زر متوافق مع ARIA
+  - `data-attr` — عنصر مع `data-*` للاستخدام في JS
+  - `meta-robots` — وسم meta للتحكم بالفهرسة
+
+- JavaScript
+  - `on` — إضافة مستمع حدث لعنصر
+  - `fetch` — قالب fetch باستخدام async/await مع معالجة الأخطاء
+  - `debounce` — دالة debounce لمعالجات الإدخال/التعديل
+  - `domready` — مستمع `DOMContentLoaded` للتهيئة
+  - `ls` — دوال مساعدة للـ `localStorage`
+  - `delegate` — تفويض الأحداث من عنصر أب للعناصر الفرعية
+
+أمثلة سريعة
+
+اكتب `vars` ثم <kbd>Tab</kbd> لإدراج قالب متغيرات CSS. اكتب `on` ثم <kbd>Tab</kbd> لإدراج هيكل مستمع حدث.
+
+```html
+<!-- مثال: ربط ملف CSS -->
+<link rel="stylesheet" href="styles.css">
+
+<!-- مثال: تضمين سكربت مع defer -->
+<script src="app.js" defer></script>
+```
+
+تتوفر هذه السنابيتات في الملفين `snippets/snippets.code-snippets` و `snippets/snippets_en.code-snippets`.
+
 ## تحسينات الجودة والتنظيم
 
 - أصلحنا سنابيتات بها أخطاء إغلاق الوسوم
