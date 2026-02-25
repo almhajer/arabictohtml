@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌐 Arabic to HTML — Arabic snippets for VS Code
+# 🌐 ArabicToHtml — Arabic snippets for VS Code
 
 <div align="center">
 

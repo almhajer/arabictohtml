@@ -88,7 +88,7 @@ Command-line / VSIX
 <!-- English README translated from the project's primary README -->
 <div align="center">
 
-# 🌐 Arabic to HTML — Arabic snippets for VS Code
+# 🌐 ArabicToHtml — Arabic snippets for VS Code
 
 <div align="center">
 

@@ -1,7 +1,7 @@
 {
   "name": "arabictohtml",
-  "displayName": "Arabic to html",
-  "description": "البرمجة باللغة العربية لعناصر الهوتمل",
+  "displayName": "ArabicToHtml",
+  "description": "Arabic snippets for HTML in VS Code - مقتطفات عربية لعناصر HTML",
   "version": "0.0.7",
   "engines": {
     "vscode": "^1.98.0"
@@ -30,7 +30,7 @@
   "homepage": "https://github.com/almhajer/ArabicToHtml",
   "readme": "README.md",
   "bugs": {
-    "url": "https://github.com/almhajer/arabictohtml/issues"
+    "url": "https://github.com/almhajer/ArabicToHtml/issues"
   },
   "keywords": [
     "Arabic",
