@@ -1,40 +1,157 @@
-# ArabicToHtml (AR/EN)
+<div align="center">
 
-إضافة VS Code لتوليد سنابيتات **HTML + CSS + JavaScript** بالعربي والإنجليزي.
+# 🌐 ArabicToHtml لـ VS Code
 
-## ما الجديد في الإصدار 0.1.0
+<div align="center">
 
-- إضافة **قائمة عناصر HTML كاملة** (141 عنصرًا) كسنابيتات ثنائية اللغة.
-- إضافة **خصائص CSS واسعة** (526 خاصية) كسنابيتات ثنائية اللغة.
-- إضافة سنابيتات JavaScript عملية بالعربي والإنجليزي.
-- تحسين بنية المشروع عبر سكربت توليد تلقائي للسنابيتات.
-- تحديث التوثيق بشكل شامل مع مراجع مستقلة داخل مجلد `docs/`.
-- توسيع التفعيل داخل `package.json` ليشمل: `html`, `css`, `javascript`, `typescript`.
+![Version](https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge&logo=visual-studio-code)
+![VS Code](https://img.shields.io/badge/VS%20Code-1.98.0%2B-green?style=for-the-badge&logo=visual-studio-code)
+[![License](https://img.shields.io/badge/license-MIT-orange?style=for-the-badge&logo=opensourceinitiative)](LICENSE.txt)
 
-## مصادر البيانات
+</div>
 
-تم الاعتماد على مصادر ويب موثوقة (MDN) بالإضافة إلى بيانات محرك VS Code الداخلية:
+### سنابيتات ثنائية اللغة (عربي/إنجليزي) لـ HTML و CSS و JavaScript داخل VS Code
 
-- MDN HTML elements reference:
-  - https://developer.mozilla.org/en-US/docs/Web/HTML/Element
-- MDN CSS reference:
-  - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
-- MDN JavaScript reference:
-  - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
-- VS Code built-in CSS language data (داخل تثبيت VS Code محليًا)
+<div align="center">
 
-## الملفات المرجعية الجديدة
+![ArabicToHtml Icon](arabictohtml.png)
 
-- [docs/html-tags-bilingual.md](docs/html-tags-bilingual.md)
-- [docs/css-properties-bilingual.md](docs/css-properties-bilingual.md)
-- [docs/javascript-reference-bilingual.md](docs/javascript-reference-bilingual.md)
+</div>
 
-## ملفات السنابيتات
+</div>
 
-- [snippets/snippets.code-snippets](snippets/snippets.code-snippets) (Arabic-first)
-- [snippets/snippets_en.code-snippets](snippets/snippets_en.code-snippets) (English-first)
+---
 
-## أمثلة Prefix سريعة
+## 📋 جدول المحتويات
+
+<div align="center">
+
+| القسم | الوصف |
+|:-----:|:------|
+| [🌟 نظرة عامة](#-نظرة-عامة) | فكرة الإضافة ومشكلتها |
+| [✨ المميزات](#-المميزات) | القدرات الأساسية |
+| [📚 ملفات Docs](#-ملفات-docs) | روابط توثيق HTML/CSS/JS |
+| [📦 ملفات Snippets](#-ملفات-snippets) | الملفات الفعلية للسنابيتات |
+| [🚀 أمثلة Prefix سريعة](#-أمثلة-prefix-سريعة) | أمثلة جاهزة للاستخدام |
+| [📥 التثبيت](#-التثبيت) | من المتجر أو عبر VSIX |
+| [⚙️ التطوير والتوليد](#️-التطوير-والتوليد) | سكربت التوليد التلقائي |
+| [🔗 مصادر البيانات](#-مصادر-البيانات) | المراجع الرسمية |
+| [🤝 المساهمة](#-المساهمة) | طريقة المساهمة |
+| [📄 الرخصة](#-الرخصة) | معلومات الترخيص |
+
+</div>
+
+---
+
+<div align="center">
+
+# 🌟 نظرة عامة
+
+<div style="background: linear-gradient(135deg, #0f4c81 0%, #3a7bd5 100%); padding: 22px; border-radius: 12px; color: white;">
+
+> **ArabicToHtml** هي إضافة VS Code تقدّم سنابيتات عملية ثنائية اللغة لتسريع كتابة HTML وCSS وJavaScript بدون الحاجة لتذكر الصياغة الكاملة لكل عنصر أو خاصية.
+
+</div>
+
+</div>
+
+<div align="center">
+
+| الفائدة | التفاصيل |
+|:------:|:---------|
+| ⚡ | كتابة أسرع عبر Prefix عربي أو إنجليزي |
+| 🎯 | تركيز على الاستخدام اليومي في الواجهة الأمامية |
+| 🌍 | مناسبة للمطورين العرب والفرق الثنائية اللغة |
+| 🧩 | تغطية واسعة للعناصر والخصائص والسيناريوهات الشائعة |
+
+</div>
+
+---
+
+<div align="center">
+
+# ✨ المميزات
+
+</div>
+
+### 1️⃣ HTML شامل
+
+<div align="center">
+
+| النقطة |
+|:-------|
+| ✅ أكثر من 141 عنصر HTML كسنابيتات |
+| ✅ Prefix عربي وإنجليزي لكل وسم |
+| ✅ دعم العناصر الشائعة والمتقدمة |
+
+</div>
+
+### 2️⃣ CSS واسع
+
+<div align="center">
+
+| النقطة |
+|:-------|
+| ✅ أكثر من 526 خاصية CSS |
+| ✅ Prefix بالعربي والإنجليزي |
+| ✅ تغطية خصائص التخطيط، النصوص، الألوان، والحركات |
+
+</div>
+
+### 3️⃣ JavaScript عملي
+
+<div align="center">
+
+| النقطة |
+|:-------|
+| ✅ سنابيتات JavaScript للاستخدام اليومي |
+| ✅ أوامر مرتبطة بالأحداث، الجلب، والتحكم بالتدفق |
+| ✅ مداخل عربية وإنجليزية لنفس الوظيفة |
+
+</div>
+
+---
+
+<div align="center">
+
+# 📚 ملفات Docs
+
+</div>
+
+<div align="center">
+
+| الملف | الوصف |
+|:-----:|:------|
+| [docs/html-tags-bilingual.md](docs/html-tags-bilingual.md) | مرجع عناصر HTML بالعربي والإنجليزي |
+| [docs/css-properties-bilingual.md](docs/css-properties-bilingual.md) | مرجع خصائص CSS بالعربي والإنجليزي |
+| [docs/javascript-reference-bilingual.md](docs/javascript-reference-bilingual.md) | مرجع JavaScript عملي ثنائي اللغة |
+
+</div>
+
+---
+
+<div align="center">
+
+# 📦 ملفات Snippets
+
+</div>
+
+<div align="center">
+
+| الملف | النوع |
+|:-----:|:------|
+| [snippets/snippets.code-snippets](snippets/snippets.code-snippets) | Arabic-first |
+| [snippets/snippets_en.code-snippets](snippets/snippets_en.code-snippets) | English-first |
+
+</div>
+
+---
+
+<div align="center">
+
+# 🚀 أمثلة Prefix سريعة
+
+</div>
 
 ### HTML
 
@@ -54,36 +171,74 @@
 - `جلب بيانات` أو `js fetch async`
 - `مرجع جافاسكربت` أو `javascript quick reference`
 
-## التثبيت
+---
+
+<div align="center">
+
+# 📥 التثبيت
+
+</div>
+
+### من VS Code Marketplace
 
 1. افتح VS Code.
 2. افتح `Extensions`.
-3. ابحث عن `ArabicToHtml` ثم ثبّت الإضافة.
+3. ابحث عن `ArabicToHtml`.
+4. اضغط Install.
 
-أو عبر VSIX:
+### عبر VSIX
 
 ```bash
 code --install-extension arabictohtml-0.1.0.vsix
 ```
 
-## التطوير والتوليد
+---
 
-تمت إضافة سكربت توليد:
+<div align="center">
+
+# ⚙️ التطوير والتوليد
+
+</div>
 
 ```bash
 node scripts/generate-snippets.js
 ```
 
-هذا الأمر يعيد توليد:
+ينتج هذا الأمر:
 
-- ملفات السنابيتات العربية والإنجليزية.
-- ملفات التوثيق المرجعية داخل `docs/`.
+- تحديث ملفات السنابيتات العربية والإنجليزية.
+- تحديث ملفات التوثيق داخل `docs/`.
 
-## ملاحظات
+---
 
-- بعض عناصر HTML قد تكون deprecated أو experimental، لكنها مضافة لأن الهدف توفير مرجع شامل.
-- بعض خصائص CSS قد تكون حديثة/تجريبية حسب المتصفح.
+<div align="center">
 
-## الرخصة
+# 🔗 مصادر البيانات
+
+</div>
+
+- MDN HTML Elements: https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+- MDN CSS Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+- MDN JavaScript Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+- VS Code built-in CSS language data
+
+---
+
+<div align="center">
+
+# 🤝 المساهمة
+
+</div>
+
+- الإبلاغ عن مشكلة: https://github.com/almhajer/arabictohtml/issues
+- إرسال Pull Request: https://github.com/almhajer/arabictohtml/pulls
+
+---
+
+<div align="center">
+
+# 📄 الرخصة
 
 MIT — راجع [LICENSE.txt](LICENSE.txt)
+
+</div>
