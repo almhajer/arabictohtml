@@ -14,7 +14,7 @@
 
 <div align="center">
 
-![ArabicToHtml Icon](arabictohtml.png)
+<img src="arabictohtml.png" width="520" alt="ArabicToHtml Icon" />
 
 </div>
 
