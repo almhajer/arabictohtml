@@ -36,6 +36,7 @@
 | [📥 Installation](#-installation) | Marketplace or VSIX |
 | [⚙️ Development & Generation](#️-development--generation) | Snippet generation workflow |
 | [🔗 Data Sources](#-data-sources) | Official references |
+| [🔗 Important Links](#-important-links) | Project and marketplace links |
 | [🤝 Contributing](#-contributing) | How to contribute |
 | [📄 License](#-license) | Licensing details |
 
@@ -229,6 +230,24 @@ This command regenerates:
 
 <div align="center">
 
+# 🔗 Important Links
+
+</div>
+
+<div align="center">
+
+| Link | Description |
+|:----:|:------------|
+| [GitHub](https://github.com/almhajer/arabictohtml) | Official repository |
+| [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=Arabic-language.arabictohtml) | Extension page |
+| [All Extensions](https://marketplace.visualstudio.com/publishers/Arabic-language) | All publisher extensions |
+
+</div>
+
+---
+
+<div align="center">
+
 # 🤝 Contributing
 
 </div>
@@ -243,5 +262,15 @@ This command regenerates:
 # 📄 License
 
 MIT — see [LICENSE.txt](LICENSE.txt)
+
+</div>
+
+---
+
+<div align="center">
+
+## 🌟 If you like this project, don't forget to leave a star ⭐
+
+Made with ❤️ for the Arabic community
 
 </div>

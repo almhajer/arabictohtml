@@ -36,6 +36,7 @@
 | [📥 التثبيت](#-التثبيت) | من المتجر أو عبر VSIX |
 | [⚙️ التطوير والتوليد](#️-التطوير-والتوليد) | سكربت التوليد التلقائي |
 | [🔗 مصادر البيانات](#-مصادر-البيانات) | المراجع الرسمية |
+| [🔗 روابط مهمة](#-روابط-مهمة) | روابط المشروع والمنصة |
 | [🤝 المساهمة](#-المساهمة) | طريقة المساهمة |
 | [📄 الرخصة](#-الرخصة) | معلومات الترخيص |
 
@@ -229,6 +230,24 @@ node scripts/generate-snippets.js
 
 <div align="center">
 
+# 🔗 روابط مهمة
+
+</div>
+
+<div align="center">
+
+| الرابط | الوصف |
+|:------:|:------|
+| [GitHub](https://github.com/almhajer/arabictohtml) | المستودع الرسمي |
+| [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=Arabic-language.arabictohtml) | صفحة الإضافة |
+| [All Extensions](https://marketplace.visualstudio.com/publishers/Arabic-language) | جميع إضافات الناشر |
+
+</div>
+
+---
+
+<div align="center">
+
 # 🤝 المساهمة
 
 </div>
@@ -243,5 +262,15 @@ node scripts/generate-snippets.js
 # 📄 الرخصة
 
 MIT — راجع [LICENSE.txt](LICENSE.txt)
+
+</div>
+
+---
+
+<div align="center">
+
+### 🌟 إذا أعجبك المشروع، لا تنسَ إضافة ⭐!
+
+**صنع بـ ❤️ للمجتمع العربي**
 
 </div>
