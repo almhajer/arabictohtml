@@ -254,6 +254,19 @@ function uniqueSorted(items) {
   return [...new Set(items)].sort((a, b) => a.localeCompare(b));
 }
 
+function readJsonIfExists(filePath) {
+  if (!fs.existsSync(filePath)) {
+    return {};
+  }
+
+  try {
+    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  } catch (error) {
+    console.warn(`Warning: could not parse JSON file at ${filePath}. Falling back to defaults.`);
+    return {};
+  }
+}
+
 function extractCssProperties() {
   if (!fs.existsSync(CSS_DATA_FILE)) {
     throw new Error(`CSS data source not found: ${CSS_DATA_FILE}`);
@@ -419,7 +432,7 @@ function createBaseSnippets(lang) {
   };
 }
 
-function buildHtmlTagSnippets(lang) {
+function buildHtmlTagSnippets(lang, existingArabicSnippets = {}) {
   const isArabic = lang === 'ar';
   const snippets = {};
 
@@ -429,10 +442,20 @@ function buildHtmlTagSnippets(lang) {
       ? [`<${tag}${tag === 'img' ? ' src="${1:image.jpg}" alt="${2:description}"' : ' ${1}'} />`]
       : [`<${tag}${tag === 'a' ? ' href="${1:#}"' : ''}>`, '  ${0}', `</${tag}>`];
 
+    const fallbackPrefix = isArabic ? [`وسم ${tag}`, `عنصر ${tag}`] : [`tag ${tag}`, `html ${tag}`];
+    const fallbackDescription = isArabic ? `إدراج وسم HTML <${tag}>` : `Insert HTML <${tag}> element`;
+    const existingSnippet = isArabic ? existingArabicSnippets[key] : null;
+    const existingPrefix = Array.isArray(existingSnippet?.prefix) ? existingSnippet.prefix : null;
+    const existingDescription = typeof existingSnippet?.description === 'string'
+      ? existingSnippet.description.trim()
+      : '';
+
     snippets[key] = {
-      prefix: isArabic ? [`وسم ${tag}`, `عنصر ${tag}`] : [`tag ${tag}`, `html ${tag}`],
+      prefix: existingPrefix && existingPrefix.length >= 2
+        ? [existingPrefix[0], existingPrefix[1]]
+        : fallbackPrefix,
       body,
-      description: isArabic ? `إدراج وسم HTML <${tag}>` : `Insert HTML <${tag}> element`,
+      description: existingDescription || fallbackDescription,
       scope: 'html'
     };
   }
@@ -440,15 +463,26 @@ function buildHtmlTagSnippets(lang) {
   return snippets;
 }
 
-function buildCssPropertySnippets(lang, cssProperties) {
+function buildCssPropertySnippets(lang, cssProperties, existingArabicSnippets = {}) {
   const isArabic = lang === 'ar';
   const snippets = {};
 
   for (const prop of cssProperties) {
+    const key = `css:property:${prop}`;
+    const fallbackPrefix = isArabic ? [`خاصية ${prop}`, `تنسيق ${prop}`] : [`property ${prop}`, `css ${prop}`];
+    const fallbackDescription = isArabic ? `خاصية CSS: ${prop}` : `CSS property: ${prop}`;
+    const existingSnippet = isArabic ? existingArabicSnippets[key] : null;
+    const existingPrefix = Array.isArray(existingSnippet?.prefix) ? existingSnippet.prefix : null;
+    const existingDescription = typeof existingSnippet?.description === 'string'
+      ? existingSnippet.description.trim()
+      : '';
+
     snippets[`css:property:${prop}`] = {
-      prefix: isArabic ? [`خاصية ${prop}`, `تنسيق ${prop}`] : [`property ${prop}`, `css ${prop}`],
+      prefix: existingPrefix && existingPrefix.length >= 2
+        ? [existingPrefix[0], existingPrefix[1]]
+        : fallbackPrefix,
       body: [`${prop}: ${1};`],
-      description: isArabic ? `خاصية CSS: ${prop}` : `CSS property: ${prop}`,
+      description: existingDescription || fallbackDescription,
       scope: 'css,scss,less,html'
     };
   }
@@ -476,18 +510,39 @@ function writeJson(filePath, data) {
   fs.writeFileSync(filePath, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
 }
 
-function buildMarkdownReferences(htmlTags, cssProperties) {
-  const htmlHeader = `# HTML Tags Reference (AR/EN)\n\nSource: MDN HTML element reference (web docs) and HTML language data from VS Code.\n\n| Tag | العربية | English |\n|---|---|---|\n`;
+function buildMarkdownReferences(arSnippets, enSnippets, htmlTags, cssProperties) {
+  const htmlHeader = `# HTML Tags Snippet Prefixes (AR/EN)\n\nSource: Generated from \`snippets/snippets.code-snippets\` and \`snippets/snippets_en.code-snippets\`.\n\nTotal tags: ${htmlTags.length}\n\n| Tag | Arabic Prefix 1 | Arabic Prefix 2 | English Prefix 1 | English Prefix 2 |\n|---|---|---|---|---|\n`;
   const htmlRows = htmlTags
-    .map((tag) => `| \`${tag}\` | وسم \`${tag}\` | \`${tag}\` element |`)
+    .map((tag) => {
+      const key = `html:tag:${tag}`;
+      const arPrefix = Array.isArray(arSnippets[key]?.prefix) ? arSnippets[key].prefix : [];
+      const enPrefix = Array.isArray(enSnippets[key]?.prefix) ? enSnippets[key].prefix : [];
+      return `| \`${tag}\` | \`${arPrefix[0] || ''}\` | \`${arPrefix[1] || ''}\` | \`${enPrefix[0] || ''}\` | \`${enPrefix[1] || ''}\` |`;
+    })
     .join('\n');
 
-  const cssHeader = `# CSS Properties Reference (AR/EN)\n\nSource: VS Code CSS language data (derived from MDN compatibility/reference datasets).\n\nTotal properties: ${cssProperties.length}\n\n| Property | العربية | English |\n|---|---|---|\n`;
+  const cssHeader = `# CSS Property Snippet Prefixes (AR/EN)\n\nSource: Generated from \`snippets/snippets.code-snippets\` and \`snippets/snippets_en.code-snippets\`.\n\nTotal properties: ${cssProperties.length}\n\n| Property | Arabic Prefix 1 | Arabic Prefix 2 | English Prefix 1 | English Prefix 2 |\n|---|---|---|---|---|\n`;
   const cssRows = cssProperties
-    .map((prop) => `| \`${prop}\` | خاصية \`${prop}\` | CSS property \`${prop}\` |`)
+    .map((prop) => {
+      const key = `css:property:${prop}`;
+      const arPrefix = Array.isArray(arSnippets[key]?.prefix) ? arSnippets[key].prefix : [];
+      const enPrefix = Array.isArray(enSnippets[key]?.prefix) ? enSnippets[key].prefix : [];
+      return `| \`${prop}\` | \`${arPrefix[0] || ''}\` | \`${arPrefix[1] || ''}\` | \`${enPrefix[0] || ''}\` | \`${enPrefix[1] || ''}\` |`;
+    })
     .join('\n');
 
-  const jsReference = `# JavaScript Reference (AR/EN)\n\nSource: MDN JavaScript reference and ECMAScript language keywords.\n\n## Keywords\n\n\`await\`, \`break\`, \`case\`, \`catch\`, \`class\`, \`const\`, \`continue\`, \`debugger\`, \`default\`, \`delete\`, \`do\`, \`else\`, \`export\`, \`extends\`, \`finally\`, \`for\`, \`function\`, \`if\`, \`import\`, \`in\`, \`instanceof\`, \`let\`, \`new\`, \`return\`, \`super\`, \`switch\`, \`this\`, \`throw\`, \`try\`, \`typeof\`, \`var\`, \`void\`, \`while\`, \`with\`, \`yield\`\n\n## Common APIs\n\n- DOM: \`querySelector\`, \`querySelectorAll\`, \`addEventListener\`, \`classList\`, \`dataset\`\n- Async: \`Promise\`, \`fetch\`, \`async/await\`, \`AbortController\`\n- Arrays: \`map\`, \`filter\`, \`reduce\`, \`find\`, \`some\`, \`every\`\n- Objects: \`Object.keys\`, \`Object.values\`, \`Object.entries\`, \`Object.assign\`\n- Storage: \`localStorage\`, \`sessionStorage\`, \`JSON.parse\`, \`JSON.stringify\`\n\n## Terminology (AR/EN)\n\n- متغير = Variable\n- دالة = Function\n- كلاس = Class\n- وعد = Promise\n- كائن = Object\n- مصفوفة = Array\n- حدث = Event\n- مستمع حدث = Event Listener\n`;
+  const jsKeys = uniqueSorted(Object.keys(arSnippets).filter((key) => key.startsWith('js:')));
+  const jsHeader = `# JavaScript Snippet Reference (AR/EN)\n\nSource: Generated from \`snippets/snippets.code-snippets\` and \`snippets/snippets_en.code-snippets\`.\n\nTotal snippets: ${jsKeys.length}\n\n| Key | Arabic Prefix 1 | Arabic Prefix 2 | English Prefix 1 | English Prefix 2 | Arabic Description | English Description |\n|---|---|---|---|---|---|---|\n`;
+  const jsRows = jsKeys
+    .map((key) => {
+      const arPrefix = Array.isArray(arSnippets[key]?.prefix) ? arSnippets[key].prefix : [];
+      const enPrefix = Array.isArray(enSnippets[key]?.prefix) ? enSnippets[key].prefix : [];
+      const arDescription = arSnippets[key]?.description || '';
+      const enDescription = enSnippets[key]?.description || '';
+      return `| \`${key}\` | \`${arPrefix[0] || ''}\` | \`${arPrefix[1] || ''}\` | \`${enPrefix[0] || ''}\` | \`${enPrefix[1] || ''}\` | \`${arDescription}\` | \`${enDescription}\` |`;
+    })
+    .join('\n');
+  const jsReference = `${jsHeader}${jsRows}\n`;
 
   fs.writeFileSync(path.join(repoRoot, 'docs', 'html-tags-bilingual.md'), `${htmlHeader}${htmlRows}\n`, 'utf8');
   fs.writeFileSync(path.join(repoRoot, 'docs', 'css-properties-bilingual.md'), `${cssHeader}${cssRows}\n`, 'utf8');
@@ -497,11 +552,12 @@ function buildMarkdownReferences(htmlTags, cssProperties) {
 function main() {
   const cssProperties = extractCssProperties();
   const htmlTags = uniqueSorted(HTML_TAGS);
+  const existingArabicSnippets = readJsonIfExists(path.join(repoRoot, 'snippets', 'snippets.code-snippets'));
 
   const arSnippets = {
     ...createBaseSnippets('ar'),
-    ...buildHtmlTagSnippets('ar'),
-    ...buildCssPropertySnippets('ar', cssProperties),
+    ...buildHtmlTagSnippets('ar', existingArabicSnippets),
+    ...buildCssPropertySnippets('ar', cssProperties, existingArabicSnippets),
     ...buildJsSnippets('ar')
   };
 
@@ -514,7 +570,7 @@ function main() {
 
   writeJson(path.join(repoRoot, 'snippets', 'snippets.code-snippets'), arSnippets);
   writeJson(path.join(repoRoot, 'snippets', 'snippets_en.code-snippets'), enSnippets);
-  buildMarkdownReferences(htmlTags, cssProperties);
+  buildMarkdownReferences(arSnippets, enSnippets, htmlTags, cssProperties);
 
   console.log(`Generated AR snippets: ${Object.keys(arSnippets).length}`);
   console.log(`Generated EN snippets: ${Object.keys(enSnippets).length}`);

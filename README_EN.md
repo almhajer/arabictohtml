@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge&logo=visual-studio-code)
+![Version](https://img.shields.io/badge/version-0.0.9-blue?style=for-the-badge&logo=visual-studio-code)
 ![VS Code](https://img.shields.io/badge/VS%20Code-1.98.0%2B-green?style=for-the-badge&logo=visual-studio-code)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=for-the-badge&logo=opensourceinitiative)](LICENSE.txt)
 
@@ -81,7 +81,7 @@
 | Item |
 |:-----|
 | ✅ 141+ HTML tags as snippets |
-| ✅ Arabic and English trigger prefixes |
+| ✅ Semantic Arabic prefixes plus matching English triggers |
 | ✅ Coverage for common and advanced tags |
 
 </div>
@@ -93,7 +93,7 @@
 | Item |
 |:-----|
 | ✅ 526+ CSS properties |
-| ✅ Bilingual Arabic/English prefixes |
+| ✅ Translated Arabic prefixes (for example: `خاصية لون`) plus matching English triggers |
 | ✅ Layout, typography, color, and animation properties |
 
 </div>
@@ -122,9 +122,9 @@
 
 | File | Description |
 |:----:|:------------|
-| [docs/html-tags-bilingual.md](docs/html-tags-bilingual.md) | Bilingual HTML tags reference |
-| [docs/css-properties-bilingual.md](docs/css-properties-bilingual.md) | Bilingual CSS properties reference |
-| [docs/javascript-reference-bilingual.md](docs/javascript-reference-bilingual.md) | Practical bilingual JavaScript reference |
+| [docs/html-tags-bilingual.md](docs/html-tags-bilingual.md) | HTML tag prefix reference (Arabic/English) |
+| [docs/css-properties-bilingual.md](docs/css-properties-bilingual.md) | CSS property prefix reference (Arabic/English) |
+| [docs/javascript-reference-bilingual.md](docs/javascript-reference-bilingual.md) | JavaScript trigger and description reference (Arabic/English) |
 
 </div>
 
@@ -156,13 +156,15 @@
 ### HTML
 
 - `صفحة` or `html page`
-- `وسم div` or `tag div`
-- `وسم img` or `tag img`
+- `وسم قسم` or `tag div`
+- `وسم صورة` or `tag img`
+- `وسم رابط` or `tag a`
 
 ### CSS
 
-- `خاصية color` or `property color`
-- `خاصية grid-template-columns` or `property grid-template-columns`
+- `خاصية لون` or `property color`
+- `خاصية قالب أعمدة الشبكة` or `property grid-template-columns`
+- `خاصية خط حجم` or `property font-size`
 - `متغيرات css` or `css vars`
 
 ### JavaScript
@@ -189,7 +191,7 @@
 ### Via VSIX
 
 ```bash
-code --install-extension arabictohtml-0.1.0.vsix
+code --install-extension arabictohtml-0.0.9.vsix
 ```
 
 ---
@@ -207,7 +209,8 @@ node scripts/generate-snippets.js
 This command regenerates:
 
 - Arabic and English snippet files.
-- Reference documentation files in `docs/`.
+- Existing Arabic translated prefixes from `snippets/snippets.code-snippets`.
+- Reference documentation files in `docs/` based on actual prefixes.
 
 ---
 

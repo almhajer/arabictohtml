@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge&logo=visual-studio-code)
+![Version](https://img.shields.io/badge/version-0.0.9-blue?style=for-the-badge&logo=visual-studio-code)
 ![VS Code](https://img.shields.io/badge/VS%20Code-1.98.0%2B-green?style=for-the-badge&logo=visual-studio-code)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=for-the-badge&logo=opensourceinitiative)](LICENSE.txt)
 
@@ -81,7 +81,7 @@
 | النقطة |
 |:-------|
 | ✅ أكثر من 141 عنصر HTML كسنابيتات |
-| ✅ Prefix عربي وإنجليزي لكل وسم |
+| ✅ Prefix عربي مترجم دلاليًا + Prefix إنجليزي مقابل لكل وسم |
 | ✅ دعم العناصر الشائعة والمتقدمة |
 
 </div>
@@ -93,7 +93,7 @@
 | النقطة |
 |:-------|
 | ✅ أكثر من 526 خاصية CSS |
-| ✅ Prefix بالعربي والإنجليزي |
+| ✅ Prefix عربي مترجم (مثل: `خاصية لون`) + Prefix إنجليزي مقابل |
 | ✅ تغطية خصائص التخطيط، النصوص، الألوان، والحركات |
 
 </div>
@@ -122,9 +122,9 @@
 
 | الملف | الوصف |
 |:-----:|:------|
-| [docs/html-tags-bilingual.md](docs/html-tags-bilingual.md) | مرجع عناصر HTML بالعربي والإنجليزي |
-| [docs/css-properties-bilingual.md](docs/css-properties-bilingual.md) | مرجع خصائص CSS بالعربي والإنجليزي |
-| [docs/javascript-reference-bilingual.md](docs/javascript-reference-bilingual.md) | مرجع JavaScript عملي ثنائي اللغة |
+| [docs/html-tags-bilingual.md](docs/html-tags-bilingual.md) | مرجع بادئات وسوم HTML (عربي/إنجليزي) |
+| [docs/css-properties-bilingual.md](docs/css-properties-bilingual.md) | مرجع بادئات خصائص CSS (عربي/إنجليزي) |
+| [docs/javascript-reference-bilingual.md](docs/javascript-reference-bilingual.md) | مرجع بادئات JavaScript مع الوصف (عربي/إنجليزي) |
 
 </div>
 
@@ -156,13 +156,15 @@
 ### HTML
 
 - `صفحة` أو `html page`
-- `وسم div` أو `tag div`
-- `وسم img` أو `tag img`
+- `وسم قسم` أو `tag div`
+- `وسم صورة` أو `tag img`
+- `وسم رابط` أو `tag a`
 
 ### CSS
 
-- `خاصية color` أو `property color`
-- `خاصية grid-template-columns` أو `property grid-template-columns`
+- `خاصية لون` أو `property color`
+- `خاصية قالب أعمدة الشبكة` أو `property grid-template-columns`
+- `خاصية خط حجم` أو `property font-size`
 - `متغيرات css` أو `css vars`
 
 ### JavaScript
@@ -189,7 +191,7 @@
 ### عبر VSIX
 
 ```bash
-code --install-extension arabictohtml-0.1.0.vsix
+code --install-extension arabictohtml-0.0.9.vsix
 ```
 
 ---
@@ -207,7 +209,8 @@ node scripts/generate-snippets.js
 ينتج هذا الأمر:
 
 - تحديث ملفات السنابيتات العربية والإنجليزية.
-- تحديث ملفات التوثيق داخل `docs/`.
+- الحفاظ على ترجمة الـPrefix العربية الموجودة في `snippets/snippets.code-snippets`.
+- تحديث ملفات التوثيق داخل `docs/` اعتمادًا على الـPrefix الفعلية.
 
 ---
 
