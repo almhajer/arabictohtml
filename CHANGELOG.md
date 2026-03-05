@@ -4,6 +4,17 @@ All notable changes to the "arabictohtml" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [Unreleased]
+
+### Changed
+
+- Synced Arabic and English README content with the latest Arabic translation prefixes.
+- Regenerated `docs/*.md` to reflect real snippet prefixes (AR/EN) from snippet files.
+- Updated `scripts/generate-snippets.js` to preserve existing Arabic translated prefixes.
+- Added "Important Links" sections in both README files.
+- Added the Arabic closing note: "إذا أعجبك المشروع، لا تنسَ إضافة ⭐!".
+- Reduced `arabictohtml.png` size and README display width for lighter project assets.
+
 ## [0.1.0]
 
 - Added full bilingual HTML tag snippets set (141 tags)
@@ -27,7 +38,3 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Fixed snippet templates and accessibility improvements
 - Enhanced documentation
 - Improved project structure
-
-## [Unreleased]
-
--- Initial release
