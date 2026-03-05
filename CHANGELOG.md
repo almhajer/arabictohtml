@@ -6,6 +6,19 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+No changes yet.
+
+## [0.0.9]
+
+### Added
+
+- Full bilingual HTML tag snippets set (141 tags).
+- Broad bilingual CSS properties snippets set (526 properties).
+- Bilingual JavaScript utility snippets and quick reference snippet.
+- Generated reference docs under `docs/` for HTML/CSS/JS.
+- Generator script `scripts/generate-snippets.js` to keep snippets/docs synchronized.
+- Snippet contribution languages expanded to `html`, `css`, `javascript`, `typescript`.
+
 ### Changed
 
 - Synced Arabic and English README content with the latest Arabic translation prefixes.
@@ -14,16 +27,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Added "Important Links" sections in both README files.
 - Added the Arabic closing note: "إذا أعجبك المشروع، لا تنسَ إضافة ⭐!".
 - Reduced `arabictohtml.png` size and README display width for lighter project assets.
-
-## [0.1.0]
-
-- Added full bilingual HTML tag snippets set (141 tags)
-- Added broad bilingual CSS properties snippets set (526 properties)
-- Added bilingual JavaScript utility snippets and quick reference snippet
-- Added generated reference docs under `docs/` for HTML/CSS/JS
-- Added generator script `scripts/generate-snippets.js` to keep snippets/docs synchronized
-- Expanded snippet contribution languages to `html`, `css`, `javascript`, `typescript`
-- Rewrote README files and updated contribution instructions
+- Rewrote README files and updated contribution instructions.
 
 ## [0.0.8]
 
