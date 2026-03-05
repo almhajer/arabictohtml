@@ -4,6 +4,16 @@ All notable changes to the "arabictohtml" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.1.0]
+
+- Added full bilingual HTML tag snippets set (141 tags)
+- Added broad bilingual CSS properties snippets set (526 properties)
+- Added bilingual JavaScript utility snippets and quick reference snippet
+- Added generated reference docs under `docs/` for HTML/CSS/JS
+- Added generator script `scripts/generate-snippets.js` to keep snippets/docs synchronized
+- Expanded snippet contribution languages to `html`, `css`, `javascript`, `typescript`
+- Rewrote README files and updated contribution instructions
+
 ## [0.0.8]
 
 - Added new CSS, JavaScript and HTML snippets (English + Arabic)

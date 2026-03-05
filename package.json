@@ -1,8 +1,8 @@
 {
   "name": "arabictohtml",
   "displayName": "ArabicToHtml",
-  "description": "Arabic snippets for HTML in VS Code - مقتطفات عربية لعناصر HTML",
-  "version": "0.0.8",
+  "description": "Bilingual Arabic/English snippets for HTML, CSS, and JavaScript in VS Code",
+  "version": "0.0.9",
   "engines": {
     "vscode": "^1.98.0"
   },
@@ -17,7 +17,31 @@
         "path": "./snippets/snippets.code-snippets"
       },
       {
+        "language": "css",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
         "language": "html",
+        "path": "./snippets/snippets_en.code-snippets"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/snippets_en.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets_en.code-snippets"
+      },
+      {
+        "language": "typescript",
         "path": "./snippets/snippets_en.code-snippets"
       }
     ]
@@ -60,7 +84,23 @@
     "سنابيت",
     "html-arabic",
     "arabic-snippets",
-    "العربية"
+    "العربية",
+    "arabic html",
+    "html بالعربي",
+    "تعلم html",
+    "اكواد html",
+    "أكواد html",
+    "كود html",
+    "مقتطفات",
+    "snippets",
+    "vscode snippets",
+    "arabic vscode",
+    "arabic code snippets",
+    "html snippets",
+    "css snippets",
+    "javascript snippets",
+    "front-end arabic",
+    "arabic web development"
   ],
   "license": "MIT",
   "author": {
